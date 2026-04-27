@@ -6,35 +6,124 @@
 
 ## 📅 2026-04-27 GitHub Agent热门仓库日报
 
-| 排名 | 仓库 | ⭐ Stars | 语言 | 核心亮点 |
-|------|------|---------|------|----------|
-| 🥇 1 | [mattpocock/skills](https://github.com/mattpocock/skills) | 25,163 | Shell | 真实工程师的Agent技能集，覆盖全流程 |
-| 🥈 2 | [trycua/cua](https://github.com/trycua/cua) | 14,535 | Python | Computer-Use Agent完整基础设施 |
-| 🥉 3 | [gastownhall/beads](https://github.com/gastownhall/beads) | 21,817 | Go | 编码Agent的分布式图问题追踪器 |
-| 4 | [abhigyanpatwari/GitNexus](https://github.com/abhigyanpatwari/GitNexus) | 30,431 | TypeScript | 零服务端代码智能引擎+Graph RAG Agent |
-| 5 | [ComposioHQ/awesome-codex-skills](https://github.com/ComposioHQ/awesome-codex-skills) | 2,198 | Python | 40+实用Codex技能精选列表 |
+| 排名 | 仓库 | ⭐ Stars | 📈 今日新增 | 语言 | 核心亮点 |
+|------|------|---------|-----------|------|----------|
+| 🥇 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 53,312 | +183 | Python | 多Agent协作的LLM金融交易框架 |
+| 🥈 2 | [abhigyanpatwari/GitNexus](https://github.com/abhigyanpatwari/GitNexus) | 30,723 | +700 | TypeScript | 零服务端代码智能引擎 + Graph RAG Agent |
+| 🥉 3 | [mattpocock/skills](https://github.com/mattpocock/skills) | 26,788 | +2,519 | Shell | 真实工程师的Agent技能集，20+技能 |
+| 4 | [gastownhall/beads](https://github.com/gastownhall/beads) | 21,932 | +152 | Go | 编码Agent的持久化记忆与图问题追踪器 |
+| 5 | [ComposioHQ/awesome-codex-skills](https://github.com/ComposioHQ/awesome-codex-skills) | 2,364 | +517 | Python | 40+实用Codex技能精选列表 |
 
 ---
 
 ## 🔥 热门仓库详细介绍
 
-### 1. mattpocock/skills
+### 1. TauricResearch/TradingAgents
 
-**🔗 链接**: https://github.com/mattpocock/skills  
-**⭐ Star数**: 25,163 | **🍴 Fork**: 2k | **语言**: Shell
+**🔗 链接**: https://github.com/TauricResearch/TradingAgents
+**⭐ Star数**: 53,312 | **🍴 Fork**: 9.7k | **语言**: Python | **许可证**: Apache-2.0
 
 #### 📋 简介
-Matt Pocock 的个人代理技能集合，直接来源于他的 `.claude` 目录。这些技能用于日常真实工程工作，强调"real engineering"而非花哨的演示代码。
+TradingAgents 是一个模仿真实交易公司运作的多Agent交易框架。通过部署专业化的LLM驱动的Agent——从基本面分析师、情绪专家、技术分析师到交易员和风险管理团队——平台协同评估市场状况并做出交易决策。这些Agent通过动态讨论来寻找最优策略。
 
-#### 🚀 主要特性
-包含 **18个技能**，分为四大类：
+#### 🚀 核心架构
 
-| 类别 | 技能示例 |
-|------|----------|
-| **规划与设计** | `to-prd` - 对话转PRD；`to-issues` - 拆分为Issues；`grill-me` - 设计面试追问 |
-| **开发** | `tdd` - 测试驱动开发；`triage-issue` - Bug根因调查；`improve-codebase-architecture` - 架构优化 |
-| **工具与配置** | `setup-pre-commit` - 配置Git钩子；`git-guardrails-claude-code` - Git安全保护 |
-| **写作与知识** | `write-a-skill` - 创建新技能；`edit-article` - 文章编辑；`obsidian-vault` - Obsidian知识库管理 |
+| 团队 | Agent角色 | 职责 |
+|------|----------|------|
+| **分析师团队** | 基本面分析师 | 评估公司财务和业绩指标，识别内在价值 |
+| | 情绪分析师 | 分析社交媒体和公众情绪，衡量短期市场情绪 |
+| | 新闻分析师 | 监控全球新闻和宏观经济指标 |
+| | 技术分析师 | 使用MACD、RSI等技术指标检测交易模式 |
+| **研究团队** | 看多/看空研究员 | 通过结构化辩论平衡潜在收益与风险 |
+| **交易员** | 交易Agent | 综合分析师和研究员报告做出交易决策 |
+| **风控** | 风险管理 + 投资组合经理 | 评估投资组合风险，审批/否决交易提案 |
+
+#### 💎 核心特性
+- **多LLM提供商**：支持 OpenAI、Google、Anthropic、xAI、DeepSeek、Qwen、GLM、Ollama、Azure
+- **持久化决策日志**：每次运行自动记录决策，下次分析时注入历史反思
+- **检查点恢复**：基于 LangGraph 的断点续跑，崩溃后从上次成功步骤恢复
+- **结构化输出**：Research Manager、Trader、Portfolio Manager 均采用结构化输出
+- **CLI + Python API**：交互式命令行和编程接口双模式
+- **Docker 支持**：一键容器化部署，含 Ollama 本地模型配置
+
+#### 📖 快速上手
+```python
+from tradingagents.graph.trading_graph import TradingAgentsGraph
+from tradingagents.default_config import DEFAULT_CONFIG
+
+ta = TradingAgentsGraph(debug=True, config=DEFAULT_CONFIG.copy())
+_, decision = ta.propagate("NVDA", "2026-01-15")
+print(decision)
+```
+
+---
+
+### 2. abhigyanpatwari/GitNexus
+
+**🔗 链接**: https://github.com/abhigyanpatwari/GitNexus
+**⭐ Star数**: 30,723 | **🍴 Fork**: 3.5k | **语言**: TypeScript (98%) | **许可证**: PolyForm Noncommercial
+
+#### 📋 简介
+GitNexus 是零服务端代码智能引擎，为AI Agent构建代码库的"神经系统"。它将代码库索引为知识图谱——追踪每一个依赖、调用链、集群和执行流程——然后通过智能工具将上下文暴露给AI Agent，使其不再遗漏代码。
+
+> *类似 DeepWiki，但更深入。DeepWiki 帮你理解代码，GitNexus 让你分析代码——因为知识图谱追踪每一条关系，而不仅仅是描述。*
+
+#### 🚀 核心创新：预计算关系智能
+
+| 对比维度 | 传统 Graph RAG | GitNexus |
+|----------|---------------|----------|
+| **查询方式** | LLM 多轮探索图边 | 工具一次调用返回完整上下文 |
+| **可靠性** | LLM 可能遗漏上下文 | 预计算结构，上下文已内置 |
+| **Token效率** | 10+查询链才理解一个函数 | 1次查询即可 |
+| **模型要求** | 需要大模型 | 小模型也能获得架构级理解 |
+
+#### 💎 核心特性
+- **16个MCP工具**：query、context、impact、detect_changes、rename、cypher 等
+- **影响分析**：追踪上游/下游依赖，按深度分层，标注置信度
+- **360°上下文视图**：任意符号的入站/出站调用、导入、所属进程
+- **多仓库MCP架构**：全局注册表，一个MCP服务器服务多个索引仓库
+- **14种语言支持**：TypeScript、Python、Java、Go、Rust、C#、Kotlin 等
+- **双模式**：CLI + MCP（本地开发） / Web UI（浏览器快速探索）
+- **4个Agent Skills**：自动安装探索、调试、影响分析、重构技能
+- **Wiki生成**：从知识图谱自动生成 LLM 驱动的文档
+
+#### 📖 快速上手
+```bash
+# 一键索引（安装Agent Skills + 注册Hooks + 生成AGENTS.md）
+npx gitnexus analyze
+
+# 配置MCP
+npx gitnexus setup
+```
+
+---
+
+### 3. mattpocock/skills
+
+**🔗 链接**: https://github.com/mattpocock/skills
+**⭐ Star数**: 26,788 | **🍴 Fork**: 2.1k | **语言**: Shell | **许可证**: MIT
+
+#### 📋 简介
+Matt Pocock 的个人Agent技能集合，直接来源于他的 `.claude` 目录。这些技能用于日常真实工程工作——不是vibe coding，而是真正的工程实践。包含 **20个技能**，覆盖从规划到交付的完整开发流程。
+
+#### 🚀 技能分类
+
+| 类别 | 技能 | 一句话描述 |
+|------|------|-----------|
+| **规划与设计** | `to-prd` | 对话上下文→PRD→GitHub Issue |
+| | `to-issues` | 将计划拆分为可独立认领的垂直切片Issues |
+| | `grill-me` | 对设计方案进行无死角追问，遍历决策树的每个分支 |
+| | `design-an-interface` | 并行子Agent生成多个截然不同的接口设计 |
+| | `request-refactor-plan` | 通过用户访谈创建详细重构计划 |
+| **开发** | `tdd` | 红-绿-重构循环的测试驱动开发 |
+| | `triage-issue` | 探索代码库定位Bug根因，生成含TDD修复计划的Issue |
+| | `improve-codebase-architecture` | 基于领域语言和ADR发现代码库深度优化机会 |
+| **工具与配置** | `setup-pre-commit` | 配置 Husky + lint-staged + Prettier + 类型检查 + 测试 |
+| | `git-guardrails-claude-code` | Claude Code Hooks拦截危险git命令 |
+| **写作与知识** | `write-a-skill` | 创建新技能（带结构和渐进披露） |
+| | `edit-article` | 文章编辑：重构段落、提升清晰度、精简文字 |
+| | `ubiquitous-language` | 提取DDD风格的通用语言词汇表 |
+| | `obsidian-vault` | 搜索、创建和管理Obsidian知识库笔记 |
 
 #### 📖 使用方法
 ```bash
@@ -42,177 +131,91 @@ npx skills@latest add mattpocock/skills/<技能名>
 ```
 
 #### 💎 核心优势
-- 实战驱动：直接来自日常工程实践
-- 开箱即用：一条命令安装，无需复杂配置
-- 全流程覆盖：从规划设计→编码开发→工具配置→知识管理
-- 安全防护：内置Git危险操作防护
+- **实战驱动**：来自日常工程实践，不是玩具Demo
+- **开箱即用**：一条 `npx` 命令安装
+- **全流程覆盖**：规划→设计→开发→测试→部署→知识管理
+- **安全防护**：内置Git危险操作防护机制
 
 ---
 
-### 2. trycua/cua
+### 4. gastownhall/beads
 
-**🔗 链接**: https://github.com/trycua/cua  
-**⭐ Star数**: 14,535 | **🍴 Fork**: 910 | **语言**: Python/HTML/Swift
-
-#### 📋 简介
-Computer-Use Agents的开源基础设施，提供沙箱、SDK和基准测试，用于训练和评估能够控制完整桌面环境（macOS/Linux/Windows/Android）的AI Agent。
-
-#### 🚀 主要特性
-
-| 组件 | 功能描述 |
-|------|----------|
-| **Cua Driver** | 后台驱动原生macOS应用，不抢占光标和焦点；支持Chromium和Canvas工具 |
-| **Cua Sandbox** | 跨OS统一API，支持云和本地(QEMU)部署 |
-| **CuaBot** | 多代理协作计算机使用，支持H.265、共享剪贴板和音频 |
-| **Cua-Bench** | 在OSWorld/ScreenSpot/Windows Arena等数据集上评估代理 |
-| **Lume** | 基于Apple Virtualization.Framework的macOS/Linux虚拟化 |
-
-#### 📖 使用方法
-```bash
-# 安装Driver
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/trycua/cua/main/libs/cua-driver/scripts/install.sh)"
-
-# Python SDK
-pip install cua
-
-# 使用Sandbox
-from cua import Sandbox, Image
-async with Sandbox.ephemeral(Image.linux()) as sb:
-    result = await sb.shell.run("echo hello")
-    screenshot = await sb.screenshot()
-```
-
-#### 💎 核心优势
-- 跨平台统一API：一套代码控制多OS沙箱
-- 后台无侵入：不抢占用户光标和焦点
-- MCP集成：与Claude Code、Cursor等工具直接集成
-- Apple Silicon原生优化：接近原生性能
-
----
-
-### 3. gastownhall/beads
-
-**🔗 链接**: https://github.com/gastownhall/beads  
-**⭐ Star数**: 21,817 | **🍴 Fork**: 1.4k | **语言**: Go (94.1%)
+**🔗 链接**: https://github.com/gastownhall/beads
+**⭐ Star数**: 21,932 | **🍴 Fork**: 1.4k | **语言**: Go (94.2%) | **许可证**: MIT
 
 #### 📋 简介
-面向AI编码代理的分布式图问题追踪器，由Dolt（版本控制的SQL数据库）驱动。核心定位是为编码代理提供持久化、结构化的记忆系统，用依赖感知的图结构替代混乱的markdown计划。
+Beads 是面向AI编码代理的分布式图问题追踪器，由 Dolt（版本控制的SQL数据库）驱动。核心使命是为编码代理提供持久化、结构化的记忆系统——用依赖感知的图结构替代混乱的markdown计划，让Agent在长周期任务中不丢失上下文。
 
-#### 🚀 主要特性
+#### 🚀 核心特性
 
 | 特性 | 说明 |
 |------|------|
-| **Dolt驱动** | 版本控制SQL数据库，支持单元格级合并和原生分支 |
-| **零冲突** | 基于哈希的ID（`bd-a1b2`），防止多代理/多分支合并冲突 |
-| **记忆压缩** | 语义"记忆衰减"，自动摘要旧任务，节省上下文窗口 |
-| **图链接** | 支持relates_to、duplicates、supersedes、replies_to关系 |
-| **层级ID** | Epic→Task→Sub-task层级结构 |
-| **灵活模式** | 嵌入式/服务器/隐蔽/贡献者多种模式 |
+| **Dolt驱动** | 版本控制SQL数据库，支持单元格级合并、原生分支、内置远程同步 |
+| **零冲突** | 哈希ID（`bd-a1b2`），多Agent/多分支工作流无合并冲突 |
+| **记忆压缩** | 语义"记忆衰减"——自动摘要已关闭的旧任务，节省上下文窗口 |
+| **消息系统** | 线程消息（`--thread`）、临时生命周期、邮件委托 |
+| **图链接** | `relates_to`、`duplicates`、`supersedes`、`replies_to` 知识图谱关系 |
+| **层级ID** | Epic（`bd-a3f8`）→ Task（`bd-a3f8.1`）→ Sub-task（`bd-a3f8.1.1`） |
+| **多模式** | 嵌入式（默认）/ 服务器 / 隐蔽 / 贡献者模式 |
 
-#### 📖 使用方法
+#### 💎 核心优势
+- **解决Agent记忆问题**：持久化结构化记忆替代易丢失的markdown
+- **依赖感知**：`bd ready` 自动识别无阻塞可执行任务
+- **多Agent协作零冲突**：哈希ID机制确保并发安全
+- **上下文窗口优化**：记忆压缩机制自动管理上下文空间
+- **Git可选**：支持非Git VCS（Sapling、Jujutsu）和CI/CD场景
+- **89个版本发布**：活跃迭代，最新版 v1.0.3
+
+#### 📖 快速上手
 ```bash
-# 安装
 brew install beads
-
-# 初始化
-cd your-project
-bd init
-
-# 核心命令
-bd ready          # 列出可执行任务
-bd create "Title" -p 0   # 创建P0任务
-bd update <id> --claim   # 原子认领任务
-bd dep add <child> <parent>  # 链接任务依赖
+cd your-project && bd init
+bd ready                     # 列出可执行任务
+bd create "Fix auth bug" -p 0  # 创建P0任务
+bd update <id> --claim       # 原子认领任务
 ```
-
-#### 💎 核心优势
-- 解决代理记忆问题：持久化结构化记忆替代易丢失的markdown
-- 依赖感知：自动识别无阻塞可执行任务
-- 多代理协作零冲突：哈希ID机制
-- 上下文窗口优化：记忆压缩机制
-- Git可选：支持非Git VCS和CI/CD场景
-
----
-
-### 4. abhigyanpatwari/GitNexus
-
-**🔗 链接**: https://github.com/abhigyanpatwari/GitNexus  
-**⭐ Star数**: 30,431 | **🍴 Fork**: 3.5k | **语言**: TypeScript (98%)
-
-#### 📋 简介
-零服务端代码智能引擎，完全在浏览器中运行的客户端知识图谱创建器。为AI Agent构建上下文的神经系统——将代码库索引为知识图谱，追踪每一个依赖、调用链、集群和执行流程。
-
-#### 🚀 主要特性
-
-| 功能 | 描述 |
-|------|------|
-| **知识图谱构建** | 多阶段索引：结构分析→解析→跨文件解析→聚类→流程追踪→搜索 |
-| **16个MCP工具** | list_repos、query、context、impact、detect_changes、rename、cypher等 |
-| **影响分析** | 追踪上游/下游依赖，按深度分层，标注置信度 |
-| **360°上下文视图** | 对任意符号展示：入站调用、出站调用、导入、所属进程 |
-| **多文件重命名** | 图谱高置信度编辑 + 文本搜索补充 |
-| **Wiki生成** | 从知识图谱自动生成LLM驱动的文档 |
-
-#### 📖 使用方法
-```bash
-# 全局安装
-npm install -g gitnexus
-
-# 一键索引
-npx gitnexus analyze
-
-# 配置MCP
-npx gitnexus setup
-
-# 常用命令
-gitnexus analyze [path]      # 索引仓库
-gitnexus serve               # 启动本地HTTP服务器
-gitnexus wiki [path]         # 生成Wiki
-```
-
-#### 💎 核心优势
-- 预计算关系智能：索引时预计算结构，一次调用返回完整上下文
-- 完全本地/浏览器端：零隐私风险，代码不上传服务器
-- 深度编辑器集成：Claude Code获得MCP+技能+Hooks完整支持
-- 小模型大能力：预计算工具让小模型具备架构级理解力
-- 支持14种编程语言：TypeScript、Python、Java、Go、Rust等
 
 ---
 
 ### 5. ComposioHQ/awesome-codex-skills
 
-**🔗 链接**: https://github.com/ComposioHQ/awesome-codex-skills  
-**⭐ Star数**: 2,198 | **🍴 Fork**: 165 | **语言**: Python
+**🔗 链接**: https://github.com/ComposioHQ/awesome-codex-skills
+**⭐ Star数**: 2,364 | **🍴 Fork**: 171 | **语言**: Python
 
 #### 📋 简介
-实用Codex技能的精选列表，用于在Codex CLI和API之间自动化工作流。包含40+实用技能，由ComposioHQ维护。
+实用Codex技能的精选列表，用于在 Codex CLI 和 API 之间自动化工作流。Codex Skills 是模块化的指令包，告诉 Codex 如何按照你的期望执行任务——每个技能拥有独立的 `SKILL.md` 元数据和步骤指引。
 
-#### 🚀 主要特性
+#### 🚀 技能分类
 
-| 类别 | 技能示例 |
-|------|----------|
-| **开发与代码工具** | `codebase-migrate` - 大型代码库迁移；`gh-fix-ci` - 修复GitHub Actions；`mcp-builder` - 构建MCP服务器 |
-| **生产力与协作** | `connect` - 连接1000+应用；`notion-*`系列 - Notion集成；`meeting-notes-and-actions` - 会议智能 |
-| **沟通与写作** | `email-draft-polish` - 邮件润色；`changelog-generator` - 变更日志生成 |
-| **数据与分析** | `spreadsheet-formula-helper` - 公式助手；`helium-mcp` - 实时新闻搜索 |
-| **元工具** | `template-skill` - 技能模板；`skill-creator` - 技能构建指南 |
+| 类别 | 代表技能 | 功能 |
+|------|---------|------|
+| **开发与代码工具** | `codebase-migrate` | 大型代码库迁移，可审查批次+CI验证 |
+| | `gh-fix-ci` | 检查失败的GitHub Actions，提出修复 |
+| | `mcp-builder` | 构建和评估MCP服务器 |
+| | `sentry-triage` | 将Sentry堆栈帧映射到本地源码诊断问题 |
+| **生产力与协作** | `connect` | 连接1000+应用（Slack、GitHub、Notion等） |
+| | `notion-*`系列 | Notion知识捕获/会议智能/研究文档/规格转实现 |
+| | `meeting-notes-and-actions` | 会议转录→摘要+决策+行动项 |
+| **沟通与写作** | `email-draft-polish` | 邮件起草、改写、精简 |
+| | `changelog-generator` | 从提交或摘要生成变更日志 |
+| | `content-research-writer` | 带来源引用的研究和内容起草 |
+| **数据与分析** | `spreadsheet-formula-helper` | 电子表格公式编写和调试 |
+| | `helium-mcp` | 实时新闻搜索+偏见评分+市场数据 |
+| **元工具** | `skill-creator` | 技能构建指南 |
+| | `template-skill` | 新技能起始模板 |
 
-#### 📖 使用方法
+#### 💎 核心优势
+- **模块化设计**：渐进式披露——元数据决定触发时机，主体内容按需加载
+- **1000+应用集成**：通过 Composio CLI 实现真实操作（邮件、Issue、Slack等）
+- **标准化结构**：`SKILL.md` + `scripts/` + `references/` + `assets/`
+- **一键安装**：Skill Installer 从GitHub路径直接安装
+
+#### 📖 快速上手
 ```bash
-# 克隆并安装
 python skill-installer/scripts/install-skill-from-github.py \
   --repo ComposioHQ/awesome-codex-skills \
   --path meeting-notes-and-actions
-
-# 验证安装
-ls ~/.codex/skills
 ```
-
-#### 💎 核心优势
-- 模块化设计：渐进式披露，仅在需要时加载主体内容
-- 1000+应用集成：通过connect技能实现真实操作（邮件、议题、Slack等）
-- 标准化结构：易于创建和共享的标准格式
-- 一键安装：Skill Installer让安装只需一条命令
 
 ---
 
@@ -220,11 +223,11 @@ ls ~/.codex/skills
 
 | 趋势 | 详情 |
 |------|------|
-| **AI Agent生态爆发** | 5个热门仓库中有5个与Agent/Skills直接相关 |
-| **Skills成为热门概念** | `mattpocock/skills`和`awesome-codex-skills`直接以skills为核心 |
-| **Agent基础设施完善** | `trycua/cua`提供沙箱和SDK，`beads`提供内存增强，`GitNexus`提供代码理解 |
-| **Claude生态关联** | 多个仓库（skills、openclaw）与Claude AI生态相关 |
-| **今日增长冠军** | `mattpocock/skills`以日增2,519 stars领跑 |
+| **Agent多角色协作成为主流** | TradingAgents 用6+专业Agent模拟真实交易团队，标志着单Agent→多Agent协作的范式转变 |
+| **Skills生态爆发** | `mattpocock/skills`日增2,519星领跑，`awesome-codex-skills`日增517星，Skills正成为Agent标准交互方式 |
+| **Agent记忆与上下文是核心痛点** | `beads`（持久化记忆）和`GitNexus`（代码知识图谱）都在解决Agent上下文丢失问题 |
+| **预计算优于实时推理** | GitNexus的"预计算关系智能"思路——索引时预计算结构而非运行时多轮查询——代表了Agent工具设计的新方向 |
+| **Claude/Codex生态主导** | 5个仓库中4个与Claude Code或Codex直接集成，OpenAI Agent生态仍在追赶 |
 
 ---
 
