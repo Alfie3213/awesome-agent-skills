@@ -232,3 +232,100 @@ python skill-installer/scripts/install-skill-from-github.py \
 ---
 
 *本日报由自动化任务生成，每日更新 | 数据来源：GitHub Trending*
+
+---
+
+## 📅 2026-04-28 GitHub Trending - Agent/Skills 精选
+
+> 自动筛选自 GitHub Trending，聚焦 AI Agent 和 Skills 相关的热门仓库
+
+---
+
+### 1. DeepSeek-V3
+
+| 项目 | 详情 |
+|------|------|
+| **仓库** | [deepseek-ai/DeepSeek-V3](https://github.com/deepseek-ai/DeepSeek-V3) |
+| **⭐ Stars** | 103,117 |
+| **简介** | DeepSeek-V3 是由深度求索(DeepSeek)开发的第三代大语言模型，采用创新的MoE架构，拥有671B总参数和37B激活参数。支持128K长上下文，在代码生成、数学推理和多语言处理方面表现卓越，训练成本仅557万美元，性价比极高。 |
+
+**核心特性：**
+- MoE架构(671B参数)
+- 128K长上下文支持
+- 高效推理与训练
+- 多语言与代码能力
+- 开源可商用
+
+---
+
+### 2. TradingAgents
+
+| 项目 | 详情 |
+|------|------|
+| **仓库** | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) |
+| **⭐ Stars** | 53,840 |
+| **简介** | TradingAgents 是一个基于多智能体LLM的金融交易框架。通过模拟真实交易公司的团队协作机制，让多个AI智能体分别扮演不同角色(分析师、策略师、交易员等)进行协作决策，实现更智能的量化交易策略生成。 |
+
+**核心特性：**
+- 多智能体协作架构
+- 模拟真实交易团队
+- 角色分工明确
+- 自主交易决策
+- 支持回测验证
+
+---
+
+### 3. skills
+
+| 项目 | 详情 |
+|------|------|
+| **仓库** | [mattpocock/skills](https://github.com/mattpocock/skills) |
+| **⭐ Stars** | 30,638 |
+| **简介** | Matt Pocock 的 Claude Skills 集合，专为 Claude Code 设计的实用技能库。包含大量经过实战验证的提示词模板和最佳实践，帮助开发者更高效地使用 Claude 进行代码审查、重构、测试编写等开发任务。 |
+
+**核心特性：**
+- Claude Code优化技能
+- 实战验证模板
+- 代码审查技能
+- 重构与测试技能
+- 持续更新维护
+
+---
+
+### 4. claude-code-templates
+
+| 项目 | 详情 |
+|------|------|
+| **仓库** | [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) |
+| **⭐ Stars** | 25,804 |
+| **简介** | Claude Code Templates 是一个CLI工具，用于配置和监控 Claude Code 项目。提供标准化的项目模板、配置管理和监控功能，帮助团队快速搭建基于Claude的开发环境，提升AI辅助编程效率。 |
+
+**核心特性：**
+- CLI配置工具
+- 标准化项目模板
+- 实时监控功能
+- 团队协作支持
+- 易用的命令行接口
+
+---
+
+### 5. free-claude-code
+
+| 项目 | 详情 |
+|------|------|
+| **仓库** | [Alishahryar1/free-claude-code](https://github.com/Alishahryar1/free-claude-code) |
+| **⭐ Stars** | 16,198 |
+| **简介** | Free Claude Code 项目让用户可以在终端、VSCode等环境中免费使用 Claude Code 功能。通过巧妙的API封装和本地代理，实现了无需付费订阅即可体验Claude强大的代码辅助能力。 |
+
+**核心特性：**
+- 免费使用Claude Code
+- 终端与IDE集成
+- 本地代理服务
+- VSCode插件支持
+- 开源替代方案
+
+---
+
+📊 *本报告由自动化任务生成于 2026-04-28*
+
+🔍 *筛选关键词: agent, agents, skill, skills, ai, claude, llm, mcp, copilot, automation, bot*
