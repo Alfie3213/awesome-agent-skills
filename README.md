@@ -10,12 +10,41 @@
 
 | 日期 | 仓库 | ⭐ Stars | 核心亮点 |
 |------|------|---------|----------|
-| 2026-04-28 | [mattpocock/skills](https://github.com/mattpocock/skills) | 34,627 | 真实工程师的Agent技能集，20+技能覆盖全流程 |
 | 2026-04-27 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 53,312 | 多Agent协作的LLM金融交易框架 |
+| 2026-04-29 | [mattpocock/skills](https://github.com/mattpocock/skills) | 38,156 | 真实工程师的Agent技能集，四大故障模式全攻克 |
 
 ---
 
 ## 📅 历史日报
+
+### 2026-04-29
+
+| 排名 | 仓库 | ⭐ Stars | 📈 今日新增 | 语言 | 核心亮点 |
+|------|------|---------|-----------|------|----------|
+| 🥇 1 | [mattpocock/skills](https://github.com/mattpocock/skills) | 38,156 | +7,321 | Shell | 真实工程师的Agent技能集，四大故障模式全攻克 |
+| 🥈 2 | [Alishahryar1/free-claude-code](https://github.com/Alishahryar1/free-claude-code) | 17,617 | +1,741 | Python | Claude Code免费代理，6种提供商按模型层级路由 |
+| 🥉 3 | [abhigyanpatwari/GitNexus](https://github.com/abhigyanpatwari/GitNexus) | 32,718 | +1,607 | TypeScript | 零服务端代码智能引擎，16个MCP工具+14种语言 |
+| 4 | [ComposioHQ/awesome-codex-skills](https://github.com/ComposioHQ/awesome-codex-skills) | 4,108 | +953 | Python | 50+实用Codex技能精选，渐进式披露架构 |
+| 5 | [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) | 26,201 | +346 | Python | Claude Code六大组件配置集合，100+即用模板 |
+
+<details>
+<summary>📖 查看详细介绍</summary>
+
+**1. mattpocock/skills** — Matt Pocock 的Agent技能集合，直接来源于 `.claude` 目录。针对四大故障模式（Misalignment/Verbosity/No feedback/Ball of mud）提供对应技能，日增7,321星连续两日领跑。
+
+**2. Alishahryar1/free-claude-code** — Anthropic兼容的代理服务器，将Claude Code API流量路由到6种免费/本地提供商（NVIDIA NIM、OpenRouter、DeepSeek、LM Studio、llama.cpp、Ollama），支持按模型层级独立路由。
+
+**3. abhigyanpatwari/GitNexus** — 零服务端代码智能引擎，将代码库索引为知识图谱。核心创新"预计算关系智能"，6阶段索引流水线，16个MCP工具，14种语言支持，日增1,607星。
+
+**4. ComposioHQ/awesome-codex-skills** — 50+实用Codex技能精选列表，覆盖开发工具、生产力协作、沟通写作、数据分析等5大类别，通过SKILL.md元数据实现渐进式披露。
+
+**5. davila7/claude-code-templates** — Claude Code即用型配置集合，六大核心组件（Agents/Commands/MCPs/Settings/Hooks/Skills），整合139+科学技能和48+代理模板，100+即用模板。
+
+</details>
+
+📊 **趋势洞察**：Skills持续爆发 | 免费代理需求激增 | 预计算范式深化 | Claude生态绝对主导 | 技能标准化加速
+
+---
 
 ### 2026-04-28
 
