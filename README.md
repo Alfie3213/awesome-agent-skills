@@ -10,14 +10,45 @@
 
 | 日期 | 仓库 | ⭐ Stars | 核心亮点 |
 |------|------|---------|----------|
-| 2026-04-27 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 53,312 | 多Agent协作的LLM金融交易框架 |
+| 2026-04-29 | [obra/superpowers](https://github.com/obra/superpowers) | 171,755 | 面向AI Agent的软件开发方法论与技能框架 |
+| 2026-04-29 | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) | 169,456 | Agent性能优化系统，技能/本能/记忆/安全一体化 |
 | 2026-04-29 | [mattpocock/skills](https://github.com/mattpocock/skills) | 38,156 | 真实工程师的Agent技能集，四大故障模式全攻克 |
+| 2026-04-27 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 53,312 | 多Agent协作的LLM金融交易框架 |
 
 ---
 
 ## 📅 历史日报
 
 ### 2026-04-29
+
+| 排名 | 仓库 | ⭐ Stars | 📈 今日新增 | 语言 | 核心亮点 |
+|------|------|---------|-----------|------|----------|
+| 🥇 1 | [obra/superpowers](https://github.com/obra/superpowers) | 171,755 | +29 | Shell | 面向AI Agent的软件开发方法论与技能框架，真实工程实践验证 |
+| 🥈 2 | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) | 169,456 | +26 | JavaScript | Agent性能优化系统，技能/本能/记忆/安全一体化 |
+| 🥉 3 | [CherryHQ/cherry-studio](https://github.com/CherryHQ/cherry-studio) | 44,689 | +19 | TypeScript | AI生产力工作室，智能聊天+自主Agent+300+助手 |
+| 4 | [agentscope-ai/QwenPaw](https://github.com/agentscope-ai/QwenPaw) | 16,070 | +7 | Python | 个人AI助手，易安装部署，支持多聊天应用扩展 |
+| 5 | [calesthio/OpenMontage](https://github.com/calesthio/OpenMontage) | 3,242 | +7 | Python | 开源Agentic视频制作系统，12流水线52工具500+技能 |
+
+<details>
+<summary>📖 查看详细介绍</summary>
+
+**1. obra/superpowers** — 经过验证的Agent技能框架和软件开发方法论，以 Shell 脚本为核心实现，提供完整的体系帮助开发者构建可靠的AI Agent系统。171,755星稳居榜首。
+
+**2. affaan-m/everything-claude-code** — 全面的 Agent Harness 性能优化系统，专为 Claude Code、Codex、Opencode、Cursor 设计。整合技能、本能、记忆、安全和研究优先开发五大核心模块。169,456星紧随其后。
+
+**3. CherryHQ/cherry-studio** — 功能强大的AI生产力工作室，集成智能聊天、自主Agent和300+预设助手。统一的前沿大语言模型访问接口，国产开源Agent工具的佼佼者。
+
+**4. agentscope-ai/QwenPaw** — 阿里巴巴AgentScope团队推出的个人AI助手，设计简洁易部署，支持本地/云端双模式，多聊天应用支持。
+
+**5. calesthio/OpenMontage** — 全球首个开源Agentic视频制作系统，将AI编码助手转变为完整的视频制作工作室，12个流水线、52个工具、500+ Agent技能。
+
+</details>
+
+📊 **趋势洞察**：Agent Skills 框架双雄争霸 | Claude 生态持续壮大 | 国产Agent工具崛起 | 垂直领域Agent化加速 | 市场进入理性沉淀期
+
+---
+
+### 2026-04-28
 
 | 排名 | 仓库 | ⭐ Stars | 📈 今日新增 | 语言 | 核心亮点 |
 |------|------|---------|-----------|------|----------|
@@ -46,41 +77,12 @@
 
 ---
 
-### 2026-04-28
-
-| 排名 | 仓库 | ⭐ Stars | 📈 今日新增 | 语言 | 核心亮点 |
-|------|------|---------|-----------|------|----------|
-| 🥇 1 | [mattpocock/skills](https://github.com/mattpocock/skills) | 34,627 | +7,429 | Shell | 真实工程师的Agent技能集，20+技能覆盖全流程 |
-| 🥈 2 | [abhigyanpatwari/GitNexus](https://github.com/abhigyanpatwari/GitNexus) | 32,342 | +1,565 | TypeScript | 零服务端代码智能引擎 + Graph RAG Agent |
-| 🥉 3 | [Alishahryar1/free-claude-code](https://github.com/Alishahryar1/free-claude-code) | 16,973 | +1,706 | Python | 免费使用Claude Code的API代理，6种提供商 |
-| 4 | [ComposioHQ/awesome-codex-skills](https://github.com/ComposioHQ/awesome-codex-skills) | 3,362 | +961 | Python | 50+实用Codex技能精选列表 |
-| 5 | [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) | 26,000 | — | Python | Claude Code CLI配置工具，Agents+Commands+MCPs |
-
-<details>
-<summary>📖 查看详细介绍</summary>
-
-**1. mattpocock/skills** — Matt Pocock 的Agent技能集合，20+技能覆盖规划→设计→开发→测试全流程。核心理念：小巧、易适配、可组合。日增7,429星领跑全场。
-
-**2. abhigyanpatwari/GitNexus** — 零服务端代码智能引擎，将代码库索引为知识图谱。核心创新"预计算关系智能"——索引时预计算结构而非运行时多轮查询，16个MCP工具，支持16种语言。
-
-**3. Alishahryar1/free-claude-code** — Anthropic兼容的代理服务器，将Claude Code API流量路由到6种免费/本地提供商（NVIDIA NIM、OpenRouter、DeepSeek、LM Studio、llama.cpp、Ollama）。
-
-**4. ComposioHQ/awesome-codex-skills** — 50+实用Codex技能精选列表，覆盖开发工具、生产力协作、沟通写作、数据分析等类别，通过SKILL.md元数据实现渐进式披露。
-
-**5. davila7/claude-code-templates** — Claude Code即用型配置集合，六大核心组件：Agents、Commands、MCPs、Settings、Hooks、Skills，整合139+科学技能和48+代理模板。
-
-</details>
-
-📊 **趋势洞察**：Skills生态持续爆发 | Claude生态主导 | 免费/低成本方案受追捧 | 预计算优于实时推理 | 模板化与标准化
-
----
-
 ### 2026-04-27
 
 | 排名 | 仓库 | ⭐ Stars | 📈 今日新增 | 语言 | 核心亮点 |
 |------|------|---------|-----------|------|----------|
 | 🥇 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 53,312 | +183 | Python | 多Agent协作的LLM金融交易框架 |
-| 🥈 2 | [abhigyanpatwari/GitNexus](https://github.com/abhigyanpatwari/GitNexus) | 30,723 | +700 | TypeScript | 零服务端代码智能引擎 + Graph RAG Agent |
+| 🥈 2 | [abhigyanpatwari/GitNexus](https://github.com/abhigyanpatwari/GitNexus) | 32,718 | +1,607 | TypeScript | 零服务端代码智能引擎 + Graph RAG Agent |
 | 🥉 3 | [mattpocock/skills](https://github.com/mattpocock/skills) | 26,788 | +2,519 | Shell | 真实工程师的Agent技能集，20+技能 |
 | 4 | [gastownhall/beads](https://github.com/gastownhall/beads) | 21,932 | +152 | Go | 编码Agent的持久化记忆与图问题追踪器 |
 | 5 | [ComposioHQ/awesome-codex-skills](https://github.com/ComposioHQ/awesome-codex-skills) | 2,364 | +517 | Python | 40+实用Codex技能精选列表 |
