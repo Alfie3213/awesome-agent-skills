@@ -1,73 +1,59 @@
 #!/usr/bin/env python3
 """
-微信公众号文章发布工具 - 使用多种方式尝试绕过IP白名单
+微信公众号文章发布工具
+使用 wx.limyai.com 第三方代理服务发布到微信草稿箱
 """
 
-import os
-import sys
-import json
-import re
-import time
-import markdown
-import requests
 import argparse
+import json
+import os
+import re
+import sys
 from pathlib import Path
 
+import markdown
+import requests
 
-def get_access_token(appid, secret):
-    """获取微信公众号access_token"""
-    url = "https://api.weixin.qq.com/cgi-bin/token"
-    params = {
-        "grant_type": "client_credential",
-        "appid": appid,
-        "secret": secret,
+API_BASE = "https://wx.limyai.com/api/openapi"
+
+
+def get_api_key():
+    """获取API密钥"""
+    api_key = os.environ.get("WECHAT_API_KEY")
+    if not api_key:
+        print("错误: 未设置 WECHAT_API_KEY 环境变量", file=sys.stderr)
+        sys.exit(1)
+    return api_key
+
+
+def get_headers(api_key):
+    """构建请求头"""
+    return {
+        "X-API-Key": api_key,
+        "Content-Type": "application/json",
     }
-    resp = requests.get(url, params=params, timeout=30)
+
+
+def list_accounts(api_key):
+    """列出已授权的微信公众号"""
+    headers = get_headers(api_key)
+    resp = requests.post(
+        f"{API_BASE}/wechat-accounts",
+        headers=headers,
+        json={},
+        timeout=30,
+    )
     data = resp.json()
-    if "access_token" in data:
-        return data["access_token"]
-    else:
-        raise Exception(f"获取access_token失败: {json.dumps(data, ensure_ascii=False)}")
-
-
-def get_access_token_stable(appid, secret):
-    """使用stable_token接口获取access_token"""
-    url = "https://api.weixin.qq.com/cgi-bin/stable_token"
-    payload = {
-        "grant_type": "client_credential",
-        "appid": appid,
-        "secret": secret,
-        "force_refresh": False,
-    }
-    resp = requests.post(url, json=payload, timeout=30)
-    data = resp.json()
-    if "access_token" in data:
-        return data["access_token"]
-    else:
-        raise Exception(f"获取stable_token失败: {json.dumps(data, ensure_ascii=False)}")
-
-
-def try_with_proxy(appid, secret, proxy_url):
-    """通过代理获取access_token"""
-    proxies = {
-        "http": proxy_url,
-        "https": proxy_url,
-    }
-    url = "https://api.weixin.qq.com/cgi-bin/token"
-    params = {
-        "grant_type": "client_credential",
-        "appid": appid,
-        "secret": secret,
-    }
-    try:
-        resp = requests.get(url, params=params, proxies=proxies, timeout=30)
-        data = resp.json()
-        if "access_token" in data:
-            return data["access_token"]
-        else:
-            raise Exception(f"通过代理获取access_token失败: {json.dumps(data, ensure_ascii=False)}")
-    except Exception as e:
-        raise Exception(f"代理连接失败: {e}")
+    if data.get("code") != 0 and data.get("success") is not True:
+        # Try alternative response format
+        if "accounts" not in data and "data" not in data:
+            print(f"获取账号列表失败: {json.dumps(data, ensure_ascii=False)}", file=sys.stderr)
+            return []
+    # Handle different response formats
+    accounts = data.get("accounts", data.get("data", []))
+    if isinstance(accounts, dict):
+        accounts = accounts.get("list", [accounts])
+    return accounts
 
 
 def md_to_wechat_html(md_content):
@@ -105,9 +91,10 @@ def extract_title(md_content):
         line = line.strip()
         if line.startswith("# "):
             title = re.sub(r'^#\s*', '', line).strip()
+            # 清理emoji
             title = re.sub(r'[\U0001F4F0-\U0001F9FF]', '', title).strip()
             if title:
-                return title
+                return title[:64]  # 微信标题最长64字符
     return "GitHub Agent/Skills 日报"
 
 
@@ -119,7 +106,8 @@ def extract_digest(md_content):
         if line.startswith(">") and "数据来源" in line:
             continue
         if line.startswith(">") and line.strip() != ">":
-            return re.sub(r'^>\s*', '', line).strip()
+            digest = re.sub(r'^>\s*', '', line).strip()
+            return digest[:120]
     for line in lines:
         line = line.strip()
         if not line.startswith("#") and not line.startswith(">") and not line.startswith("---") and line:
@@ -127,135 +115,135 @@ def extract_digest(md_content):
     return "GitHub Agent/Skills 热门项目日报"
 
 
-def publish_draft(access_token, title, content, digest=""):
+def publish_article(api_key, appid, title, content, digest="", content_format="html", article_type="news"):
     """发布文章到微信公众号草稿箱"""
-    url = f"https://api.weixin.qq.com/cgi-bin/draft/add?access_token={access_token}"
-    article = {
-        "articles": [
-            {
-                "title": title,
-                "author": "Awesome Agent Skills",
-                "digest": digest[:120] if digest else "",
-                "content": content,
-                "content_source_url": "https://github.com/Alfie3213/awesome-agent-skills",
-                "need_open_comment": 0,
-                "only_fans_can_comment": 0,
-            }
-        ]
+    headers = get_headers(api_key)
+    payload = {
+        "wechatAppid": appid,
+        "title": title,
+        "content": content,
+        "summary": digest[:120] if digest else "",
+        "contentFormat": content_format,
+        "articleType": article_type,
     }
-    resp = requests.post(url, json=article, timeout=30)
+
+    resp = requests.post(
+        f"{API_BASE}/wechat-publish",
+        headers=headers,
+        json=payload,
+        timeout=60,
+    )
     data = resp.json()
     return data
+
+
+def cmd_list_accounts(args):
+    """列出已授权账号"""
+    api_key = get_api_key()
+    accounts = list_accounts(api_key)
+    if not accounts:
+        print("未找到已授权的微信公众号")
+        return
+    print(f"找到 {len(accounts)} 个已授权账号:")
+    for acc in accounts:
+        appid = acc.get("wechatAppid", acc.get("appid", "N/A"))
+        name = acc.get("name", acc.get("nickname", "N/A"))
+        acc_type = acc.get("type", acc.get("serviceType", "N/A"))
+        verified = acc.get("verified", acc.get("isVerified", False))
+        status = acc.get("status", "N/A")
+        print(f"  - {name} (AppID: {appid}, 类型: {acc_type}, 认证: {verified}, 状态: {status})")
+
+
+def cmd_publish(args):
+    """发布文章到草稿箱"""
+    api_key = get_api_key()
+
+    # 读取文件
+    if args.markdown:
+        file_path = Path(args.markdown)
+        content_format = "markdown"
+    elif args.html:
+        file_path = Path(args.html)
+        content_format = "html"
+    else:
+        print("错误: 请指定 --markdown 或 --html 文件", file=sys.stderr)
+        sys.exit(1)
+
+    if not file_path.exists():
+        print(f"错误: 文件不存在: {file_path}", file=sys.stderr)
+        sys.exit(1)
+
+    file_content = file_path.read_text(encoding="utf-8")
+
+    # 提取标题和摘要
+    title = extract_title(file_content)
+    digest = extract_digest(file_content)
+
+    # 确定内容格式
+    if content_format == "markdown":
+        # 使用HTML格式发布（微信兼容性更好）
+        html_content = md_to_wechat_html(file_content)
+        publish_content = html_content
+        publish_format = "html"
+    else:
+        publish_content = file_content
+        publish_format = "html"
+
+    article_type = getattr(args, "type", "news") or "news"
+
+    print(f"📝 标题: {title}")
+    print(f"📋 摘要: {digest[:80]}...")
+    print(f"📄 内容格式: {publish_format}")
+    print(f"📂 文章类型: {article_type}")
+
+    # 发布
+    print("\n📤 正在发布到草稿箱...")
+    try:
+        result = publish_article(
+            api_key=api_key,
+            appid=args.appid,
+            title=title,
+            content=publish_content,
+            digest=digest,
+            content_format=publish_format,
+            article_type=article_type,
+        )
+
+        # 检查结果
+        if result.get("code") == 0 or result.get("success") is True or "media_id" in result:
+            media_id = result.get("media_id", result.get("data", {}).get("media_id", "N/A"))
+            print(f"✅ 发布成功! media_id: {media_id}")
+        else:
+            error_msg = result.get("message", result.get("msg", json.dumps(result, ensure_ascii=False)))
+            print(f"❌ 发布失败: {error_msg}", file=sys.stderr)
+            sys.exit(1)
+    except Exception as e:
+        print(f"❌ 发布异常: {e}", file=sys.stderr)
+        sys.exit(1)
 
 
 def main():
     parser = argparse.ArgumentParser(description="微信公众号文章发布工具")
     subparsers = parser.add_subparsers(dest="command")
 
-    publish_parser = subparsers.add_parser("publish", help="发布Markdown文件到草稿箱")
+    # list-accounts 命令
+    subparsers.add_parser("list-accounts", help="列出已授权的微信公众号")
+
+    # publish 命令
+    publish_parser = subparsers.add_parser("publish", help="发布文章到草稿箱")
     publish_parser.add_argument("--appid", required=True, help="微信公众号AppID")
-    publish_parser.add_argument("--markdown", required=True, help="Markdown文件路径")
+    publish_parser.add_argument("--markdown", help="Markdown文件路径")
+    publish_parser.add_argument("--html", help="HTML文件路径")
+    publish_parser.add_argument("--type", choices=["news", "newspic"], default="news", help="文章类型")
 
     args = parser.parse_args()
 
-    if args.command != "publish":
+    if args.command == "list-accounts":
+        cmd_list_accounts(args)
+    elif args.command == "publish":
+        cmd_publish(args)
+    else:
         parser.print_help()
-        sys.exit(1)
-
-    api_key = os.environ.get("WECHAT_API_KEY")
-    if not api_key:
-        print("错误: 未设置 WECHAT_API_KEY 环境变量", file=sys.stderr)
-        sys.exit(1)
-
-    md_path = Path(args.markdown)
-    if not md_path.exists():
-        print(f"错误: 文件不存在: {md_path}", file=sys.stderr)
-        sys.exit(1)
-
-    md_content = md_path.read_text(encoding="utf-8")
-    title = extract_title(md_content)
-    digest = extract_digest(md_content)
-
-    print(f"📝 标题: {title}")
-    print(f"📋 摘要: {digest[:80]}...")
-
-    html_content = md_to_wechat_html(md_content)
-
-    # 尝试多种方式获取access_token
-    access_token = None
-
-    # 方式1: 直接获取
-    print("\n🔄 方式1: 直接获取access_token...")
-    try:
-        access_token = get_access_token(args.appid, api_key)
-        print("✅ 方式1成功!")
-    except Exception as e:
-        print(f"❌ 方式1失败: {e}")
-
-    # 方式2: 使用stable_token接口
-    if not access_token:
-        print("\n🔄 方式2: 使用stable_token接口...")
-        try:
-            access_token = get_access_token_stable(args.appid, api_key)
-            print("✅ 方式2成功!")
-        except Exception as e:
-            print(f"❌ 方式2失败: {e}")
-
-    # 方式3: 尝试使用免费代理
-    if not access_token:
-        print("\n🔄 方式3: 尝试使用代理...")
-        free_proxies = [
-            # 尝试一些公共代理
-            "http://proxy:8080",
-        ]
-        # 获取代理列表
-        try:
-            proxy_resp = requests.get(
-                "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
-                timeout=10
-            )
-            if proxy_resp.status_code == 200:
-                proxy_list = proxy_resp.text.strip().split("\n")[:20]
-                free_proxies = [f"http://{p.strip()}" for p in proxy_list if p.strip()]
-                print(f"   获取到 {len(free_proxies)} 个代理")
-        except Exception:
-            print("   无法获取代理列表")
-
-        for proxy_url in free_proxies:
-            print(f"   尝试代理: {proxy_url}")
-            try:
-                access_token = try_with_proxy(args.appid, api_key, proxy_url)
-                if access_token:
-                    print(f"✅ 方式3成功! 代理: {proxy_url}")
-                    break
-            except Exception:
-                continue
-        if not access_token:
-            print("❌ 方式3失败: 所有代理均不可用")
-
-    if not access_token:
-        print("\n❌ 所有方式均失败，无法获取access_token", file=sys.stderr)
-        print("💡 建议: 请将服务器IP添加到微信公众号IP白名单", file=sys.stderr)
-        # 获取当前公网IP
-        try:
-            ip_resp = requests.get("https://api.ipify.org", timeout=5)
-            print(f"   当前公网IP: {ip_resp.text}", file=sys.stderr)
-            print(f"   请在 mp.weixin.qq.com → 开发 → 基本配置 → IP白名单 中添加此IP", file=sys.stderr)
-        except Exception:
-            pass
-        sys.exit(1)
-
-    # 发布到草稿箱
-    print(f"\n📤 正在发布到草稿箱...")
-    try:
-        result = publish_draft(access_token, title, html_content, digest)
-        if "media_id" in result:
-            print(f"✅ 发布成功! media_id: {result['media_id']}")
-        else:
-            print(f"❌ 发布失败: {json.dumps(result, ensure_ascii=False)}", file=sys.stderr)
-            sys.exit(1)
-    except Exception as e:
-        print(f"❌ 发布异常: {e}", file=sys.stderr)
         sys.exit(1)
 
 
