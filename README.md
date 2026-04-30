@@ -13,7 +13,7 @@
 | 2026-04-29 | [obra/superpowers](https://github.com/obra/superpowers) | 171,755 | 面向AI Agent的软件开发方法论与技能框架 |
 | 2026-04-29 | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) | 169,456 | Agent性能优化系统，技能/本能/记忆/安全一体化 |
 | 2026-04-27 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 53,312 | 多Agent协作的LLM金融交易框架 |
-| 2026-04-30 | [warpdotdev/warp](https://github.com/warpdotdev/warp) | 44,362 | Agentic开发环境，终端原生Agent体验 |
+| 2026-04-30 | [warpdotdev/warp](https://github.com/warpdotdev/warp) | 44,762 | Agentic开发环境，终端原生Agent体验 |
 | 2026-04-29 | [mattpocock/skills](https://github.com/mattpocock/skills) | 38,156 | 真实工程师的Agent技能集，四大故障模式全攻克 |
 
 ---
@@ -24,28 +24,28 @@
 
 | 排名 | 仓库 | ⭐ Stars | 📈 今日新增 | 语言 | 核心亮点 |
 |------|------|---------|-----------|------|----------|
-| 🥇 1 | [warpdotdev/warp](https://github.com/warpdotdev/warp) | 44,362 | +12,822 | Rust | Agentic开发环境，终端原生Agent体验 |
-| 🥈 2 | [mattpocock/skills](https://github.com/mattpocock/skills) | 44,970 | +7,280 | Shell | 真实工程师的Agent技能集，四大故障模式全攻克 |
-| 🥉 3 | [obra/superpowers](https://github.com/obra/superpowers) | 173,199 | +1,653 | Shell | 面向AI Agent的技能框架与软件开发方法论 |
-| 4 | [ComposioHQ/awesome-codex-skills](https://github.com/ComposioHQ/awesome-codex-skills) | 4,834 | +1,177 | Python | 50+实用Codex技能精选，渐进式披露架构 |
-| 5 | [abhigyanpatwari/GitNexus](https://github.com/abhigyanpatwari/GitNexus) | 33,367 | +774 | TypeScript | 零服务端代码智能引擎 + Graph RAG Agent |
+| 🥇 1 | [warpdotdev/warp](https://github.com/warpdotdev/warp) | 44,762 | +12,822 | Rust | Agentic开发环境，终端原生Agent体验 |
+| 🥈 2 | [mattpocock/skills](https://github.com/mattpocock/skills) | 45,252 | +7,280 | Shell | 真实工程师的Agent技能集，四大故障模式全攻克 |
+| 🥉 3 | [obra/superpowers](https://github.com/obra/superpowers) | 173,311 | +1,653 | Shell | 面向AI Agent的技能框架与软件开发方法论 |
+| 4 | [ComposioHQ/awesome-codex-skills](https://github.com/ComposioHQ/awesome-codex-skills) | 4,860 | +1,177 | Python | 50+实用Codex技能精选，渐进式披露架构 |
+| 5 | [lukilabs/craft-agents-oss](https://github.com/lukilabs/craft-agents-oss) | 5,374 | +393 | TypeScript | Agent Native桌面应用，多LLM多会话管理 |
 
 <details>
 <summary>📖 查看详细介绍</summary>
 
-**1. warpdotdev/warp** — Agentic开发环境，诞生于终端。将AI Agent能力深度集成到终端工作流，支持智能补全、自然语言命令、自动化工作流。今日暴涨12,822星，Rust构建的高性能Agent终端。
+**1. warpdotdev/warp** — Agentic开发环境，诞生于终端。内置编码Agent、支持Claude Code/Codex/Gemini CLI等外部Agent、Agentic管理工作流、自动化Issue-to-PR流水线。今日暴涨12,822星，Rust构建的高性能Agent终端。
 
-**2. mattpocock/skills** — Matt Pocock的Agent技能集合，针对四大故障模式提供对应技能方案，连续多日保持高增长，今日新增7,280星。
+**2. mattpocock/skills** — Matt Pocock的Agent技能集合，针对四大故障模式提供对应技能方案（/tdd、/diagnose、/grill-me等16+技能），连续多日保持高增长，今日新增7,280星。
 
-**3. obra/superpowers** — 经过验证的Agent技能框架和软件开发方法论，以Shell脚本为核心实现，提供完整的体系帮助开发者构建可靠的AI Agent系统。173,199星稳居榜首。
+**3. obra/superpowers** — 经过验证的Agent技能框架和软件开发方法论，7步开发流程+技能库+多平台支持，以Shell脚本为核心实现。173,311星稳居榜首。
 
-**4. ComposioHQ/awesome-codex-skills** — 50+实用Codex技能精选列表，覆盖5大类别，通过SKILL.md元数据实现渐进式披露架构，为Codex生态提供可复用的技能范式。
+**4. ComposioHQ/awesome-codex-skills** — 50+实用Codex技能精选列表，覆盖5大类别，通过SKILL.md元数据实现渐进式披露架构，Composio 1000+应用集成。
 
-**5. abhigyanpatwari/GitNexus** — 零服务端代码智能引擎，内置Graph RAG Agent，核心创新"预计算关系智能"，16个MCP工具，14种语言支持。
+**5. lukilabs/craft-agents-oss** — craft.do团队构建的Agent Native桌面应用，同时使用Claude Agent SDK和Pi SDK，多LLM/多会话/32+MCP工具/事件驱动自动化，团队自身用Craft Agents开发Craft Agents。
 
 </details>
 
-📊 **趋势洞察**：Agent环境化趋势 | Skills持续爆发 | 方法论>工具 | 预计算范式深化 | Rust+Agent新组合
+📊 **趋势洞察**：Agent环境化趋势加速 | Skills生态持续爆发 | 方法论>工具 | Agent Native应用崛起 | 多Agent/多LLM融合
 
 ---
 
