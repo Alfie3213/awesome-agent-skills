@@ -1,0 +1,30 @@
+name: Publish to WeChat Draft
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Date of the daily report (YYYY-MM-DD)'
+        required: true
+        type: string
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests markdown
+
+      - name: Publish to WeChat
+        env:
+          WECHAT_API_KEY: ${{ secrets.WECHAT_API_KEY }}
+        run: |
+          python3 scripts/wechat_api.py publish --appid wxef8076005687e866 --markdown daily/${{ inputs.date }}.md
