@@ -13,12 +13,41 @@
 | 2026-04-29 | [obra/superpowers](https://github.com/obra/superpowers) | 171,755 | 面向AI Agent的软件开发方法论与技能框架 |
 | 2026-04-29 | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) | 169,456 | Agent性能优化系统，技能/本能/记忆/安全一体化 |
 | 2026-04-27 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 53,312 | 多Agent协作的LLM金融交易框架 |
-| 2026-04-30 | [warpdotdev/warp](https://github.com/warpdotdev/warp) | 44,762 | Agentic开发环境，终端原生Agent体验 |
+| 2026-05-01 | [warpdotdev/warp](https://github.com/warpdotdev/warp) | 49,323 | Agentic开发环境，终端原生Agent体验 |
 | 2026-04-29 | [mattpocock/skills](https://github.com/mattpocock/skills) | 38,156 | 真实工程师的Agent技能集，四大故障模式全攻克 |
 
 ---
 
 ## 📅 历史日报
+
+### 2026-05-01
+
+| 排名 | 仓库 | ⭐ Stars | 📈 今日新增 | 语言 | 核心亮点 |
+|------|------|---------|-----------|------|----------|
+| 🥇 1 | [warpdotdev/warp](https://github.com/warpdotdev/warp) | 49,323 | +8,399 | Rust | Agentic开发环境，终端原生Agent体验 |
+| 🥈 2 | [mattpocock/skills](https://github.com/mattpocock/skills) | 49,608 | +6,187 | Shell | 真实工程师的Agent技能集，四大故障模式全攻克 |
+| 🥉 3 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 57,821 | +2,023 | Python | 多Agent协作的LLM金融交易框架 |
+| 4 | [obra/superpowers](https://github.com/obra/superpowers) | 174,626 | +1,632 | Shell | 面向AI Agent的技能框架与软件开发方法论 |
+| 5 | [1jehuang/jcode](https://github.com/1jehuang/jcode) | 1,905 | +675 | Rust | 极致性能编码Agent工具，语义记忆+多Agent协作 |
+
+<details>
+<summary>📖 查看详细介绍</summary>
+
+**1. warpdotdev/warp** — Agentic开发环境，诞生于终端。内置"Oz"编码Agent，支持Claude Code/Codex/Gemini CLI等外部Agent，Issue→Spec→Implement→PR全自动流水线。Rust构建，双许可证（MIT + AGPL v3），OpenAI创始赞助。今日暴涨8,399星。
+
+**2. mattpocock/skills** — Matt Pocock的Agent技能集合，针对四大故障模式（Misalignment/Verbosity/No feedback/Ball of mud）提供16+技能，核心理念：软件工程基本功在AI时代更重要。今日新增6,187星持续爆发。
+
+**3. TauricResearch/TradingAgents** — 多Agent协作LLM金融交易框架，模拟真实交易公司运作。分析师→研究员→交易员→风控→组合经理，20+ LLM提供商支持。57,821星持续攀升。
+
+**4. obra/superpowers** — Agent技能框架和软件开发方法论，7步结构化开发流程，技能强制执行，子Agent驱动开发。174,626星稳居榜首。
+
+**5. 1jehuang/jcode** — 极致性能编码Agent工具，启动速度快42-245倍，内存低5-28倍。语义记忆+Swarm多Agent协作+Self-Dev自修改模式+30+ LLM提供商。1,905星新秀。
+
+</details>
+
+📊 **趋势洞察**：Agent终端化全面加速 | Skills从爆发走向成熟 | 性能成Agent工具新战场 | 多Agent协作成标配 | Agent自我演化初现
+
+---
 
 ### 2026-04-30
 
