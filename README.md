@@ -10,15 +10,44 @@
 
 | 日期 | 仓库 | ⭐ Stars | 核心亮点 |
 |------|------|---------|----------|
-| 2026-04-29 | [obra/superpowers](https://github.com/obra/superpowers) | 171,755 | 面向AI Agent的软件开发方法论与技能框架 |
+| 2026-05-02 | [obra/superpowers](https://github.com/obra/superpowers) | 175,658 | 面向AI Agent的软件开发方法论与技能框架 |
 | 2026-04-29 | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) | 169,456 | Agent性能优化系统，技能/本能/记忆/安全一体化 |
-| 2026-04-27 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 53,312 | 多Agent协作的LLM金融交易框架 |
-| 2026-05-01 | [warpdotdev/warp](https://github.com/warpdotdev/warp) | 49,323 | Agentic开发环境，终端原生Agent体验 |
-| 2026-04-29 | [mattpocock/skills](https://github.com/mattpocock/skills) | 38,156 | 真实工程师的Agent技能集，四大故障模式全攻克 |
+| 2026-05-02 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 59,962 | 多Agent协作的LLM金融交易框架 |
+| 2026-05-02 | [mattpocock/skills](https://github.com/mattpocock/skills) | 52,638 | 真实工程师的Agent技能集，四大故障模式全攻克 |
+| 2026-05-02 | [warpdotdev/warp](https://github.com/warpdotdev/warp) | 51,527 | Agentic开发环境，终端原生Agent体验 |
 
 ---
 
 ## 📅 历史日报
+
+### 2026-05-02
+
+| 排名 | 仓库 | ⭐ Stars | 📈 今日新增 | 语言 | 核心亮点 |
+|------|------|---------|-----------|------|----------|
+| 🥇 1 | [mattpocock/skills](https://github.com/mattpocock/skills) | 52,638 | +3,645 | Shell | 真实工程师的Agent技能集，四大故障模式全攻克 |
+| 🥈 2 | [warpdotdev/warp](https://github.com/warpdotdev/warp) | 51,527 | +3,401 | Rust | Agentic开发环境，终端原生Agent体验 |
+| 🥉 3 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 59,962 | +2,112 | Python | 多Agent协作的LLM金融交易框架 |
+| 4 | [obra/superpowers](https://github.com/obra/superpowers) | 175,658 | +1,096 | Shell | 面向AI Agent的技能框架与软件开发方法论 |
+| 5 | [1jehuang/jcode](https://github.com/1jehuang/jcode) | 2,380 | +403 | Rust | 极致性能编码Agent工具，语义记忆+多Agent协作 |
+
+<details>
+<summary>📖 查看详细介绍</summary>
+
+**1. mattpocock/skills** — Matt Pocock的Agent技能集合，今日以3,645星增量重夺榜首，总量突破5万大关。针对四大故障模式提供16+技能，核心理念：软件工程基本功在AI时代更重要。自4月28日爆发以来连续5天保持高位增长。
+
+**2. warpdotdev/warp** — Agentic开发环境，今日新增3,401星，连续3天保持Top 2。内置Oz编码Agent，Issue→Spec→Implement→PR全自动流水线，Rust构建，双许可证模式。
+
+**3. TauricResearch/TradingAgents** — 多Agent协作LLM金融交易框架，今日新增2,112星，总量逼近6万。模拟真实交易公司运作，20+ LLM提供商支持，金融Agent赛道标杆。
+
+**4. obra/superpowers** — Agent技能框架和软件开发方法论，今日新增1,096星，175,658星总量稳居Agent领域第一。7步结构化开发流程，技能强制执行，子Agent驱动开发。
+
+**5. 1jehuang/jcode** — 极致性能编码Agent工具，今日新增403星。启动速度快42-245倍，语义记忆+Swarm多Agent协作+Self-Dev自修改模式，技术路线极具前瞻性。
+
+</details>
+
+📊 **趋势洞察**：Skills重夺榜首 | Warp增速理性回归 | TradingAgents突破6万 | superpowers稳如泰山 | 新赛道蓄势待发
+
+---
 
 ### 2026-05-01
 
