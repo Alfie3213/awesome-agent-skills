@@ -7,267 +7,240 @@
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
     font-size: 16px;
     line-height: 1.8;
     color: #2c3e50;
-    background: #f8f9fa;
+    background: #f8fafc;
     max-width: 680px;
     margin: 0 auto;
-    padding: 20px 16px;
-  }
-  .container {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 32px 28px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    padding: 24px 20px;
   }
   h1 {
     font-size: 24px;
     font-weight: 700;
-    color: #1a56db;
-    text-align: center;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
-  }
-  .source-line {
-    text-align: center;
-    color: #6b7280;
-    font-size: 14px;
-    margin-bottom: 28px;
+    color: #1e3a5f;
+    margin: 0 0 24px 0;
     padding-bottom: 16px;
-    border-bottom: 2px solid #e8edf5;
+    border-bottom: 3px solid #2563eb;
+    text-align: center;
+    letter-spacing: 0.5px;
   }
   h2 {
     font-size: 20px;
     font-weight: 700;
-    color: #1e40af;
-    margin: 28px 0 16px;
+    color: #1e3a5f;
+    margin: 32px 0 16px 0;
     padding-left: 12px;
-    border-left: 4px solid #3b82f6;
+    border-left: 4px solid #2563eb;
   }
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e40af;
+    margin: 28px 0 12px 0;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border-radius: 8px;
+  }
+  h3 a { color: #1e40af; text-decoration: none; }
+  h3 a:hover { text-decoration: underline; }
+  p {
+    margin: 12px 0;
+    color: #374151;
+    text-align: justify;
+  }
+  strong {
+    color: #1e40af;
+    font-weight: 600;
+  }
+  a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  a:hover { color: #1d4ed8; text-decoration: underline; }
   table {
     width: 100%;
-    border-collapse: collapse;
-    margin: 16px 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
     font-size: 14px;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
   }
-  thead {
-    background: linear-gradient(135deg, #1e40af, #3b82f6);
-    color: #ffffff;
+  thead tr {
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
   }
   th {
-    padding: 12px 10px;
+    padding: 12px 14px;
+    color: #ffffff;
     font-weight: 600;
-    text-align: center;
+    text-align: left;
+    white-space: nowrap;
   }
   td {
-    padding: 10px;
-    text-align: center;
+    padding: 10px 14px;
     border-bottom: 1px solid #e5e7eb;
   }
-  tbody tr:nth-child(odd) { background: #f0f5ff; }
-  tbody tr:nth-child(even) { background: #ffffff; }
-  tbody tr:hover { background: #dbeafe; }
+  tbody tr:nth-child(1) td { background: #fffbeb; }
+  tbody tr:nth-child(2) td { background: #f0f9ff; }
+  tbody tr:nth-child(3) td { background: #fefce8; }
+  tbody tr:nth-child(even) td { background: #f8fafc; }
+  tbody tr:hover td { background: #eff6ff; }
+  code {
+    background: #eff6ff;
+    color: #1e40af;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  }
+  blockquote {
+    border-left: 4px solid #93c5fd;
+    padding: 12px 16px;
+    margin: 16px 0;
+    background: #eff6ff;
+    border-radius: 0 8px 8px 0;
+    color: #1e40af;
+    font-size: 15px;
+  }
+  hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #93c5fd, #2563eb, #93c5fd, transparent);
+    margin: 32px 0;
+  }
+  .source-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    color: #1e40af;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .insight-box {
+    background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 100%);
+    color: #ffffff;
+    padding: 20px 24px;
+    border-radius: 12px;
+    margin: 24px 0;
+    line-height: 1.9;
+  }
+  .insight-box strong { color: #93c5fd; }
+  .insight-box p { color: #e0e7ff; }
+  .repo-link {
+    display: inline-block;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: #2563eb;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin: 8px 0 4px 0;
+  }
   .rank-badge {
     display: inline-block;
-    width: 28px; height: 28px;
+    width: 28px;
+    height: 28px;
     line-height: 28px;
+    text-align: center;
     border-radius: 50%;
     font-weight: 700;
     font-size: 14px;
-    color: #fff;
+    margin-right: 4px;
   }
-  .rank-1 { background: linear-gradient(135deg, #f59e0b, #d97706); }
-  .rank-2 { background: linear-gradient(135deg, #94a3b8, #64748b); }
-  .rank-3 { background: linear-gradient(135deg, #b45309, #92400e); }
-  .rank-4, .rank-5 { background: #3b82f6; }
-  .stars { color: #1e40af; font-weight: 600; }
-  .today-add { color: #059669; font-weight: 600; }
-  a { color: #2563eb; text-decoration: none; }
-  a:hover { color: #1d4ed8; text-decoration: underline; }
-  h3 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #1e40af;
-    margin: 24px 0 10px;
-    padding: 8px 12px;
-    background: linear-gradient(90deg, #eff6ff, transparent);
-    border-radius: 6px;
-  }
-  h3 a { color: #1e40af; }
-  .detail-text {
-    margin: 8px 0 4px;
-    color: #374151;
-    text-indent: 0;
-    line-height: 1.9;
-  }
-  .github-link {
-    display: inline-block;
-    margin: 8px 0 16px;
-    padding: 6px 16px;
-    background: #eff6ff;
-    border: 1px solid #bfdbfe;
-    border-radius: 20px;
-    font-size: 13px;
-    color: #1e40af;
-  }
-  .github-link:hover { background: #dbeafe; }
-  .divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
-    margin: 8px 0 20px;
-  }
-  .insight-box {
-    background: linear-gradient(135deg, #eff6ff, #dbeafe);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 16px 0;
-    border-left: 4px solid #3b82f6;
-  }
-  .insight-box strong { color: #1e40af; }
+  .rank-1 { background: #fbbf24; color: #78350f; }
+  .rank-2 { background: #94a3b8; color: #1e293b; }
+  .rank-3 { background: #d97706; color: #78350f; }
   .footer {
     text-align: center;
-    color: #9ca3af;
-    font-size: 12px;
-    margin-top: 32px;
-    padding-top: 16px;
-    border-top: 1px solid #e5e7eb;
-  }
-  .img-placeholder {
-    width: 100%;
-    max-width: 480px;
-    margin: 12px auto;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  }
-  .img-placeholder img {
-    width: 100%;
-    display: block;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #e5e7eb;
+    color: #6b7280;
+    font-size: 13px;
   }
 </style>
 </head>
 <body>
-<div class="container">
 
-<h1>🤖 GitHub Agent热门仓库日报</h1>
-<p class="source-line">2026-05-02 | 数据来源：GitHub Trending</p>
+<div class="source-tag">📡 数据来源：GitHub Trending</div>
 
-<h2>🏆 热门仓库排行榜</h2>
+<h1>GitHub Agent热门仓库日报 - 2026-05-02</h1>
+
 <table>
 <thead>
-<tr><th>排名</th><th>仓库</th><th>Stars</th><th>今日新增</th><th>核心亮点</th></tr>
+<tr>
+<th>排名</th>
+<th>仓库</th>
+<th>Stars</th>
+<th>今日新增</th>
+<th>核心亮点</th>
+</tr>
 </thead>
 <tbody>
 <tr>
-  <td><span class="rank-badge rank-1">1</span></td>
-  <td><a href="https://github.com/mattpocock/skills">mattpocock/skills</a></td>
-  <td class="stars">53,555</td>
-  <td class="today-add">+3,645</td>
-  <td>真实工程师的Agent技能集</td>
+<td><span class="rank-badge rank-1">🥇</span></td>
+<td><a href="https://github.com/mattpocock/skills">mattpocock/skills</a></td>
+<td>53,594</td>
+<td>+3,645</td>
+<td>真实工程师的Agent技能集，四大故障模式全攻克</td>
 </tr>
 <tr>
-  <td><span class="rank-badge rank-2">2</span></td>
-  <td><a href="https://github.com/warpdotdev/warp">warpdotdev/warp</a></td>
-  <td class="stars">52,045</td>
-  <td class="today-add">+3,401</td>
-  <td>Agentic开发环境</td>
+<td><span class="rank-badge rank-2">🥈</span></td>
+<td><a href="https://github.com/warpdotdev/warp">warpdotdev/warp</a></td>
+<td>52,060</td>
+<td>+3,401</td>
+<td>Agentic开发环境，终端原生Agent体验</td>
 </tr>
 <tr>
-  <td><span class="rank-badge rank-3">3</span></td>
-  <td><a href="https://github.com/TauricResearch/TradingAgents">TradingAgents</a></td>
-  <td class="stars">60,560</td>
-  <td class="today-add">+2,112</td>
-  <td>多Agent LLM金融交易框架</td>
+<td><span class="rank-badge rank-3">🥉</span></td>
+<td><a href="https://github.com/TauricResearch/TradingAgents">TauricResearch/TradingAgents</a></td>
+<td>60,573</td>
+<td>+2,112</td>
+<td>多Agent协作的LLM金融交易框架</td>
 </tr>
 <tr>
-  <td><span class="rank-badge rank-4">4</span></td>
-  <td><a href="https://github.com/obra/superpowers">obra/superpowers</a></td>
-  <td class="stars">176,027</td>
-  <td class="today-add">+1,096</td>
-  <td>Agent技能框架与开发方法论</td>
+<td>4</td>
+<td><a href="https://github.com/obra/superpowers">obra/superpowers</a></td>
+<td>176,039</td>
+<td>+1,096</td>
+<td>面向AI Agent的技能框架与软件开发方法论</td>
 </tr>
 <tr>
-  <td><span class="rank-badge rank-5">5</span></td>
-  <td><a href="https://github.com/1jehuang/jcode">1jehuang/jcode</a></td>
-  <td class="stars">2,519</td>
-  <td class="today-add">+403</td>
-  <td>极致性能编码Agent工具</td>
+<td>5</td>
+<td><a href="https://github.com/1jehuang/jcode">1jehuang/jcode</a></td>
+<td>2,524</td>
+<td>+403</td>
+<td>极致性能编码Agent工具，语义记忆+多Agent协作</td>
 </tr>
 </tbody>
 </table>
-
-<h2>📖 详细介绍</h2>
-
-<div class="divider"></div>
-
 <h3>1. <a href="https://github.com/mattpocock/skills">mattpocock/skills</a></h3>
-
-<div class="img-placeholder">
-  <img src="imgs/skills-toolkit-new.png" alt="Skills Toolkit" />
-</div>
-
-<p class="detail-text">Matt Pocock 的 Agent 技能集合，直接来源于他的 <code>.claude</code> 目录。针对 AI 编码 Agent 的四大故障模式（需求不对齐、冗余输出、缺乏反馈、代码腐化）提供 16+ 可组合技能，包括 /grill-me 需求对齐、/tdd 红绿重构循环、/diagnose 结构化调试等。核心理念：软件工程基本功在 AI 时代更重要。今日以 3,645 星增量稳居榜首。</p>
-<a class="github-link" href="https://github.com/mattpocock/skills">🔗 GitHub链接</a>
-
-<div class="divider"></div>
-
+<p>Matt Pocock 的 Agent 技能集合，直接来源于他的 <code>.claude</code> 目录。针对 AI 编码 Agent 的四大故障模式（需求不对齐、冗余输出、缺乏反馈、代码腐化）提供 16+ 可组合技能，包括 /grill-me 需求对齐、/tdd 红绿重构循环、/diagnose 结构化调试等。核心理念：软件工程基本功在 AI 时代更重要。今日以 3,645 星增量稳居榜首。</p>
+<p class="repo-link">🔗 <a href="https://github.com/mattpocock/skills">https://github.com/mattpocock/skills</a></p>
 <h3>2. <a href="https://github.com/warpdotdev/warp">warpdotdev/warp</a></h3>
-
-<div class="img-placeholder">
-  <img src="imgs/warp-terminal-new.png" alt="Warp Terminal" />
-</div>
-
-<p class="detail-text">诞生于终端的 Agentic 开发环境，Rust 构建（98.2%）。内置"Oz"编码 Agent，支持 Claude Code、Codex、Gemini CLI 等外部 Agent 接入，实现 Issue→Spec→Implement→PR 全自动 Agentic 工作流。双许可证模式（MIT + AGPL v3），OpenAI 创始赞助，提供可视化 Agent 监控面板。连续多日保持高位增长，今日新增 3,401 星。</p>
-<a class="github-link" href="https://github.com/warpdotdev/warp">🔗 GitHub链接</a>
-
-<div class="divider"></div>
-
+<p>诞生于终端的 Agentic 开发环境，Rust 构建。内置"Oz"编码 Agent，支持 Claude Code、Codex、Gemini CLI 等外部 Agent 接入，实现 Issue→Spec→Implement→PR 全自动 Agentic 工作流。双许可证模式（MIT + AGPL v3），OpenAI 创始赞助，提供可视化 Agent 监控面板。连续多日保持高位增长，今日新增 3,401 星。</p>
+<p class="repo-link">🔗 <a href="https://github.com/warpdotdev/warp">https://github.com/warpdotdev/warp</a></p>
 <h3>3. <a href="https://github.com/TauricResearch/TradingAgents">TauricResearch/TradingAgents</a></h3>
-
-<div class="img-placeholder">
-  <img src="imgs/trading-agents-new.png" alt="Trading Agents" />
-</div>
-
-<p class="detail-text">多 Agent 协作 LLM 金融交易框架，模拟真实交易公司运作。四支专业团队协作：分析师团队（基本面、情绪、新闻、技术）→ 研究团队（看多/看空辩论）→ 交易员（综合决策）→ 风控与组合经理（风险审批）。支持 20+ LLM 提供商，Apache 2.0 开源，附 arXiv 论文。今日新增 2,112 星，总量突破 6 万。</p>
-<a class="github-link" href="https://github.com/TauricResearch/TradingAgents">🔗 GitHub链接</a>
-
-<div class="divider"></div>
-
+<p>多 Agent 协作 LLM 金融交易框架，模拟真实交易公司运作。四支专业团队协作：分析师团队（基本面、情绪、新闻、技术）→ 研究团队（看多/看空辩论）→ 交易员（综合决策）→ 风控与组合经理（风险审批）。支持 20+ LLM 提供商，Apache 2.0 开源，附 arXiv 论文。今日新增 2,112 星，总量突破 6 万。</p>
+<p class="repo-link">🔗 <a href="https://github.com/TauricResearch/TradingAgents">https://github.com/TauricResearch/TradingAgents</a></p>
 <h3>4. <a href="https://github.com/obra/superpowers">obra/superpowers</a></h3>
-
-<div class="img-placeholder">
-  <img src="imgs/superpowers-methodology-new.png" alt="Superpowers Methodology" />
-</div>
-
-<p class="detail-text">经过真实工程验证的 Agent 技能框架和软件开发方法论，176,027 星稳居 Agent 领域第一。7 步结构化开发流程：头脑风暴→Git Worktrees 隔离→计划拆解→子 Agent 驱动开发→TDD 红绿重构→自动代码审查→分支收尾。核心理念：测试优先、系统化流程胜过临场发挥。支持 Claude Code、Codex、Cursor、Copilot、Gemini CLI 六大平台。</p>
-<a class="github-link" href="https://github.com/obra/superpowers">🔗 GitHub链接</a>
-
-<div class="divider"></div>
-
+<p>经过真实工程验证的 Agent 技能框架和软件开发方法论，176,039 星稳居 Agent 领域第一。7 步结构化开发流程：头脑风暴→Git Worktrees 隔离→计划拆解→子 Agent 驱动开发→TDD 红绿重构→自动代码审查→分支收尾。核心理念：测试优先、系统化流程胜过临场发挥。支持 Claude Code、Codex、Cursor、Copilot、Gemini CLI 六大平台。</p>
+<p class="repo-link">🔗 <a href="https://github.com/obra/superpowers">https://github.com/obra/superpowers</a></p>
 <h3>5. <a href="https://github.com/1jehuang/jcode">1jehuang/jcode</a></h3>
-
-<p class="detail-text">极致性能编码 Agent Harness，Rust 构建（94.2%）。性能碾压：启动速度快 42-245 倍，内存占用低 5-28 倍；语义记忆：基于向量的自动上下文召回系统；Swarm 多 Agent 协作：同仓库多 Agent 自动通知、冲突解决、消息广播；Self-Dev 模式：Agent 可修改自身源码实现无限定制。30+ LLM 提供商支持，技术路线极具前瞻性。</p>
-<a class="github-link" href="https://github.com/1jehuang/jcode">🔗 GitHub链接</a>
-
-<h2>🔍 趋势洞察</h2>
-
-<div class="insight-box">
-<p><strong>Skills 生态持续主导</strong>——mattpocock/skills 重夺榜首，与 obra/superpowers 形成"技能双雄"格局，Agent 技能框架正在从实验走向工程化标准</p>
-<p><strong>终端 Agent 化加速</strong>——Warp 将终端重构为 Agentic 开发环境，连续 5 天保持高增长，预示开发工具链全面 Agent 化</p>
-<p><strong>多 Agent 协作成标配</strong>——TradingAgents 和 jcode 均以多 Agent 协作为核心架构，单一 Agent 已无法满足复杂场景需求</p>
-<p><strong>性能成新战场</strong>——jcode 以极致性能切入，Agent 工具的启动速度和资源占用正成为用户选择的关键指标</p>
-<p><strong>方法论 > 工具</strong>——superpowers 的持续领跑证明，结构化的开发方法论比单纯的功能堆叠更有价值</p>
-</div>
+<p>极致性能编码 Agent Harness，Rust 构建。性能碾压：启动速度快 42-245 倍，内存占用低 5-28 倍；语义记忆：基于向量的自动上下文召回系统；Swarm 多 Agent 协作：同仓库多 Agent 自动通知、冲突解决、消息广播；Self-Dev 模式：Agent 可修改自身源码实现无限定制。30+ LLM 提供商支持，技术路线极具前瞻性。</p>
+<p class="repo-link">🔗 <a href="https://github.com/1jehuang/jcode">https://github.com/1jehuang/jcode</a></p>
+<h2>趋势洞察</h2><div class="insight-box"><p>今日 Agent 生态延续高热态势，几个关键趋势值得关注：<strong>Skills 生态持续主导</strong>——mattpocock/skills 以 +3,645 稳居榜首，与 obra/superpowers 形成"技能双雄"格局，Agent 技能框架正在从实验走向工程化标准；<strong>终端 Agent 化加速</strong>——Warp 将终端重构为 Agentic 开发环境，连续 5 天保持高增长，预示开发工具链全面 Agent 化；<strong>多 Agent 协作成标配</strong>——TradingAgents 和 jcode 均以多 Agent 协作为核心架构，单一 Agent 已无法满足复杂场景需求；<strong>性能成新战场</strong>——jcode 以极致性能切入，Agent 工具的启动速度和资源占用正成为用户选择的关键指标；<strong>方法论 &gt; 工具</strong>——superpowers 的持续领跑证明，结构化的开发方法论比单纯的功能堆叠更有价值。</p></div>
 
 <div class="footer">
-<p>本日报由自动化任务生成，每日更新 | 数据来源：GitHub Trending</p>
+  <p>由自动化任务生成 · 每日更新</p>
+  <p style="margin-top:4px;font-size:12px;color:#94a3b8;">GitHub Agent热门仓库日报 | 2026-05-02</p>
 </div>
 
-</div>
 </body>
 </html>
