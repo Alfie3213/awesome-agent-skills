@@ -10,11 +10,11 @@
 
 | 日期 | 仓库 | ⭐ Stars | 核心亮点 |
 |------|------|---------|----------|
-| 2026-05-02 | [obra/superpowers](https://github.com/obra/superpowers) | 175,658 | 面向AI Agent的软件开发方法论与技能框架 |
+| 2026-05-02 | [obra/superpowers](https://github.com/obra/superpowers) | 176,021 | 面向AI Agent的技能框架与软件开发方法论 |
 | 2026-04-29 | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) | 169,456 | Agent性能优化系统，技能/本能/记忆/安全一体化 |
-| 2026-05-02 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 59,962 | 多Agent协作的LLM金融交易框架 |
-| 2026-05-02 | [mattpocock/skills](https://github.com/mattpocock/skills) | 52,638 | 真实工程师的Agent技能集，四大故障模式全攻克 |
-| 2026-05-02 | [warpdotdev/warp](https://github.com/warpdotdev/warp) | 51,527 | Agentic开发环境，终端原生Agent体验 |
+| 2026-05-02 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 60,547 | 多Agent协作的LLM金融交易框架 |
+| 2026-05-02 | [mattpocock/skills](https://github.com/mattpocock/skills) | 53,531 | 真实工程师的Agent技能集，四大故障模式全攻克 |
+| 2026-05-02 | [warpdotdev/warp](https://github.com/warpdotdev/warp) | 52,034 | Agentic开发环境，终端原生Agent体验 |
 
 ---
 
@@ -24,11 +24,11 @@
 
 | 排名 | 仓库 | ⭐ Stars | 📈 今日新增 | 语言 | 核心亮点 |
 |------|------|---------|-----------|------|----------|
-| 🥇 1 | [mattpocock/skills](https://github.com/mattpocock/skills) | 52,638 | +3,645 | Shell | 真实工程师的Agent技能集，四大故障模式全攻克 |
-| 🥈 2 | [warpdotdev/warp](https://github.com/warpdotdev/warp) | 51,527 | +3,401 | Rust | Agentic开发环境，终端原生Agent体验 |
-| 🥉 3 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 59,962 | +2,112 | Python | 多Agent协作的LLM金融交易框架 |
-| 4 | [obra/superpowers](https://github.com/obra/superpowers) | 175,658 | +1,096 | Shell | 面向AI Agent的技能框架与软件开发方法论 |
-| 5 | [1jehuang/jcode](https://github.com/1jehuang/jcode) | 2,380 | +403 | Rust | 极致性能编码Agent工具，语义记忆+多Agent协作 |
+| 🥇 1 | [mattpocock/skills](https://github.com/mattpocock/skills) | 53,531 | +3,645 | Shell | 真实工程师的Agent技能集，四大故障模式全攻克 |
+| 🥈 2 | [warpdotdev/warp](https://github.com/warpdotdev/warp) | 52,034 | +3,401 | Rust | Agentic开发环境，终端原生Agent体验 |
+| 🥉 3 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 60,547 | +2,112 | Python | 多Agent协作的LLM金融交易框架 |
+| 4 | [obra/superpowers](https://github.com/obra/superpowers) | 176,021 | +1,096 | Shell | 面向AI Agent的技能框架与软件开发方法论 |
+| 5 | [1jehuang/jcode](https://github.com/1jehuang/jcode) | 2,517 | +403 | Rust | 极致性能编码Agent工具，语义记忆+多Agent协作 |
 
 <details>
 <summary>📖 查看详细介绍</summary>
