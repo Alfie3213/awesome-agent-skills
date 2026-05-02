@@ -10,11 +10,11 @@
 
 | 日期 | 仓库 | ⭐ Stars | 核心亮点 |
 |------|------|---------|----------|
-| 2026-05-02 | [obra/superpowers](https://github.com/obra/superpowers) | 176,039 | 面向AI Agent的技能框架与软件开发方法论 |
+| 2026-05-02 | [obra/superpowers](https://github.com/obra/superpowers) | 176,065 | 面向AI Agent的技能框架与软件开发方法论 |
 | 2026-04-29 | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) | 169,456 | Agent性能优化系统，技能/本能/记忆/安全一体化 |
-| 2026-05-02 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 60,573 | 多Agent协作的LLM金融交易框架 |
-| 2026-05-02 | [mattpocock/skills](https://github.com/mattpocock/skills) | 53,594 | 真实工程师的Agent技能集，四大故障模式全攻克 |
-| 2026-05-02 | [warpdotdev/warp](https://github.com/warpdotdev/warp) | 52,060 | Agentic开发环境，终端原生Agent体验 |
+| 2026-05-02 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 60,610 | 多Agent协作的LLM金融交易框架 |
+| 2026-05-02 | [mattpocock/skills](https://github.com/mattpocock/skills) | 53,653 | 真实工程师的Agent技能集，四大故障模式全攻克 |
+| 2026-05-02 | [warpdotdev/warp](https://github.com/warpdotdev/warp) | 52,091 | Agentic开发环境，终端原生Agent体验 |
 
 ---
 
