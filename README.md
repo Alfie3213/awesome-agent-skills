@@ -10,15 +10,45 @@
 
 | 日期 | 仓库 | ⭐ Stars | 核心亮点 |
 |------|------|---------|----------|
+| 2026-05-03 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 62,816 | 多Agent协作LLM金融交易框架，模拟真实交易公司 |
 | 2026-05-02 | [obra/superpowers](https://github.com/obra/superpowers) | 176,065 | 面向AI Agent的技能框架与软件开发方法论 |
 | 2026-04-29 | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) | 169,456 | Agent性能优化系统，技能/本能/记忆/安全一体化 |
 | 2026-05-02 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 60,610 | 多Agent协作的LLM金融交易框架 |
-| 2026-05-02 | [mattpocock/skills](https://github.com/mattpocock/skills) | 53,653 | 真实工程师的Agent技能集，四大故障模式全攻克 |
+| 2026-05-02 | [mattpocock/skills](https://github.com/mattpoclock/skills) | 53,653 | 真实工程师的Agent技能集，四大故障模式全攻克 |
 | 2026-05-02 | [warpdotdev/warp](https://github.com/warpdotdev/warp) | 52,091 | Agentic开发环境，终端原生Agent体验 |
 
 ---
 
 ## 📅 历史日报
+
+### 2026-05-03
+
+| 排名 | 仓库 | ⭐ Stars | 📈 今日新增 | 语言 | 核心亮点 |
+|------|------|---------|-----------|------|----------|
+| 🥇 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 62,816 | +2,225 | Python | 多Agent协作LLM金融交易框架，模拟真实交易公司 |
+| 🥈 2 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | 36,873 | +1,299 | TypeScript | Claude多Agent编排平台，100+Agent集群协调 |
+| 🥉 3 | [1jehuang/jcode](https://github.com/1jehuang/jcode) | 2,868 | +482 | Rust | 极致性能编码Agent，启动快42-245倍+语义记忆 |
+| 4 | [browserbase/skills](https://github.com/browserbase/skills) | 1,533 | +346 | JavaScript | Claude Agent浏览器自动化技能，反检测+CAPTCHA |
+| 5 | [tirth8205/code-review-graph](https://github.com/tirth8205/code-review-graph) | 14,882 | +274 | Python | 代码知识图谱，6.8倍Token节省+精准影响分析 |
+
+<details>
+<summary>📖 查看详细介绍</summary>
+
+**1. TauricResearch/TradingAgents** — 多Agent协作的LLM金融交易框架，模拟真实交易公司运作。部署分析师（基本面/情绪/新闻/技术）、研究员（看多/看空辩论）、交易员和风控团队，基于LangGraph构建，支持10+ LLM提供商，内置决策日志和检查点恢复。
+
+**2. ruvnet/ruflo** — 面向Claude Code的多Agent编排平台，100+专业Agent跨机器协同。零信任联邦通信、SONA自学习架构、GOAP A*目标规划器、210+ MCP工具，14类型PII检测管道，企业级安全。
+
+**3. 1jehuang/jcode** — Rust构建的极致性能编码Agent，启动快42-245倍，内存仅1/14。被动语义记忆、Swarm多Agent协作、Self-Dev自修改模式，支持30+ LLM提供商。
+
+**4. browserbase/skills** — Claude Agent浏览器自动化技能插件，11个专业技能覆盖反检测浏览、CAPTCHA解决、AI对抗性UI测试、DevTools全协议追踪，一键安装。
+
+**5. tirth8205/code-review-graph** — 基于Tree-sitter的本地代码知识图谱，精准影响半径分析，代码审查6.8倍、日常任务49倍Token节省，23种语言，28个MCP工具。
+
+</details>
+
+📊 **趋势洞察**：多Agent协作深化 | 性能效率成新战场 | Agent感知能力扩展
+
+---
 
 ### 2026-05-02
 
