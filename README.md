@@ -10,6 +10,7 @@
 
 | 日期 | 仓库 | ⭐ Stars | 核心亮点 |
 |------|------|---------|----------|
+| 2026-05-04 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 65,383 | 多Agent协作LLM金融交易框架，模拟真实交易公司 |
 | 2026-05-03 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 64,332 | 多Agent协作LLM金融交易框架，模拟真实交易公司 |
 | 2026-05-02 | [obra/superpowers](https://github.com/obra/superpowers) | 176,065 | 面向AI Agent的技能框架与软件开发方法论 |
 | 2026-04-29 | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) | 169,456 | Agent性能优化系统，技能/本能/记忆/安全一体化 |
@@ -20,6 +21,35 @@
 ---
 
 ## 📅 历史日报
+
+### 2026-05-04
+
+| 排名 | 仓库 | ⭐ Stars | 📈 今日新增 | 语言 | 核心亮点 |
+|------|------|---------|-----------|------|----------|
+| 🥇 1 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 65,383 | +3,313 | Python | 多Agent协作LLM金融交易框架，模拟真实交易公司 |
+| 🥈 2 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | 39,096 | +1,840 | TypeScript | Claude多Agent编排平台，100+Agent集群协调 |
+| 🥉 3 | [1jehuang/jcode](https://github.com/1jehuang/jcode) | 3,452 | +591 | Rust | 极致性能编码Agent，启动快42-245倍+语义记忆 |
+| 4 | [Hmbown/DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI) | 2,211 | +343 | Rust | DeepSeek V4终端编码Agent，1M上下文+RLM并行推理 |
+| 5 | [browserbase/skills](https://github.com/browserbase/skills) | 1,841 | +322 | JavaScript | Claude Agent浏览器自动化技能，反检测+CAPTCHA |
+
+<details>
+<summary>📖 查看详细介绍</summary>
+
+**1. TauricResearch/TradingAgents** — 多Agent协作LLM金融交易框架，模拟真实交易公司。分析师（基本面/情绪/新闻/技术）、研究员（看多/看空辩论）、交易员和风控团队，LangGraph构建，10+ LLM提供商。今日新增3,313星，连续多日领跑。
+
+**2. ruvnet/ruflo** — Claude Code多Agent编排平台，100+专业Agent跨机器协同。零信任联邦通信、SONA自学习、GOAP A*规划器、210+ MCP工具。今日新增1,840星。
+
+**3. 1jehuang/jcode** — Rust极致性能编码Agent，启动快42-245倍，内存仅1/14。被动语义记忆、Swarm多Agent协作、Self-Dev自修改模式。
+
+**4. Hmbown/DeepSeek-TUI** — DeepSeek V4终端原生编码Agent，Rust单二进制。RLM递归推理（1-16子模型并行）、1M Token上下文、LSP诊断反馈循环、技能系统。
+
+**5. browserbase/skills** — Claude Agent浏览器自动化技能插件，11个专业技能覆盖反检测浏览、CAPTCHA解决、AI UI测试、DevTools追踪。
+
+</details>
+
+📊 **趋势洞察**：金融Agent持续爆发 | Rust性能军团崛起 | Agent能力模块化加速
+
+---
 
 ### 2026-05-03
 
