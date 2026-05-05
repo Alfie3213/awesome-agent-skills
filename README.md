@@ -10,6 +10,7 @@
 
 | 日期 | 仓库 | ⭐ Stars | 核心亮点 |
 |------|------|---------|----------|
+| 2026-05-05 | [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) | 92,712 | 147个专业Agent人格，12部门全栈AI Agency |
 | 2026-05-04 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 65,383 | 多Agent协作LLM金融交易框架，模拟真实交易公司 |
 | 2026-05-03 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 64,332 | 多Agent协作LLM金融交易框架，模拟真实交易公司 |
 | 2026-05-02 | [obra/superpowers](https://github.com/obra/superpowers) | 176,065 | 面向AI Agent的技能框架与软件开发方法论 |
@@ -21,6 +22,35 @@
 ---
 
 ## 📅 历史日报
+
+### 2026-05-05
+
+| 排名 | 仓库 | ⭐ Stars | 📈 今日新增 | 语言 | 核心亮点 |
+|------|------|---------|-----------|------|----------|
+| 🥇 1 | [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) | 92,712 | +1,189 | Shell | 147个专业Agent人格，12部门全栈AI Agency |
+| 🥈 2 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 67,598 | +2,182 | Python | 多Agent协作LLM金融交易框架，模拟真实交易公司 |
+| 🥉 3 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | 41,516 | +2,598 | TypeScript | Claude多Agent编排平台，100+Agent集群协调 |
+| 4 | [Hmbown/DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI) | 4,059 | +1,274 | Rust | DeepSeek V4终端编码Agent，1M上下文+RLM并行推理 |
+| 5 | [1jehuang/jcode](https://github.com/1jehuang/jcode) | 3,931 | +548 | Rust | 极致性能编码Agent，启动快42-245倍+语义记忆 |
+
+<details>
+<summary>📖 查看详细介绍</summary>
+
+**1. msitarzewski/agency-agents** — 147个精心打造的Agent人格，覆盖12个部门。每个Agent有独特性格、沟通风格和可交付成果，支持11+编码工具，内置跨部门团队组装方案。92,712星杀入Trending。
+
+**2. TauricResearch/TradingAgents** — 多Agent协作LLM金融交易框架，分析师+研究员+交易员+风控，LangGraph构建，10+ LLM。今日新增2,182星。
+
+**3. ruvnet/ruflo** — Claude Code多Agent编排平台，今日2,598星增量全场最高。零信任联邦通信、SONA自学习、210+ MCP工具，41,516星突破4万。
+
+**4. Hmbown/DeepSeek-TUI** — DeepSeek V4终端原生编码Agent，RLM递归推理（1-16子模型并行），1M Token上下文，LSP诊断反馈循环。今日1,274星翻倍增长。
+
+**5. 1jehuang/jcode** — Rust极致性能编码Agent，启动快42-245倍，被动语义记忆、Swarm多Agent协作、Self-Dev自修改模式。
+
+</details>
+
+📊 **趋势洞察**：Agent人格化浪潮来袭 | 编排平台增速登顶 | 终端Agent全面爆发
+
+---
 
 ### 2026-05-04
 
