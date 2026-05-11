@@ -9,6 +9,7 @@
 > 每日追踪 Top 1 最热门仓库，按 Stars 从高到低排列
 
 | 日期 | 仓库 | ⭐ Stars | 核心亮点 |
+| 2026-05-11 | [strukto-ai/mirage](https://github.com/strukto-ai/mirage) | 1,874 | AI Agent统一虚拟文件系统 |
 |------|------|---------|----------|
 | 2026-05-05 | [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) | 92,712 | 147个专业Agent人格，12部门全栈AI Agency |
 | 2026-05-04 | [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) | 65,383 | 多Agent协作LLM金融交易框架，模拟真实交易公司 |
