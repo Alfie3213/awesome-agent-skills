@@ -1,5 +1,6 @@
 # Awesome Agent Skills
 | 2026-05-11 | [strukto-ai/mirage](https://github.com/strukto-ai/mirage) | 1875 | A Unified Virtual Filesystem For AI Agents |
+| 2026-05-11 | [strukto-ai/mirage](https://github.com/strukto-ai/mirage) | 1875 | A Unified Virtual Filesystem For AI Agents |
 
 > 精选与 AI Agent、Skills 相关的 GitHub 热门项目日报
 
