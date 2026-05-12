@@ -1,4 +1,5 @@
 # Awesome Agent Skills
+| 2026-05-12 | [strukto-ai/mirage](https://github.com/strukto-ai/mirage) | 1951 | A Unified Virtual Filesystem For AI Agents |
 | 2026-05-11 | [strukto-ai/mirage](https://github.com/strukto-ai/mirage) | 1875 | A Unified Virtual Filesystem For AI Agents |
 | 2026-05-11 | [strukto-ai/mirage](https://github.com/strukto-ai/mirage) | 1875 | A Unified Virtual Filesystem For AI Agents |
 
