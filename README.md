@@ -1,4 +1,5 @@
 # awesome-agent-skills
+| 2026-05-15 | [huangserva/3DCellForge](https://github.com/huangserva/3DCellForge) | 2021 | AI-powered interactive 3D model generation, inspection, and presentation studio. |
 
 > 自动化报告仓库
 
