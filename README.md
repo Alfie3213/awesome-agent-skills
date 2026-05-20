@@ -1,4 +1,5 @@
 # awesome-agent-skills
+| 2026-05-20 | [vercel-labs/zerolang](https://github.com/vercel-labs/zerolang) | 3380 | The programming language for agents |
 
 > 自动化报告仓库
 
