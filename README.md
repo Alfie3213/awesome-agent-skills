@@ -1,4 +1,5 @@
 # awesome-agent-skills
+| 2026-05-25 | [thananon/9arm-skills](https://github.com/thananon/9arm-skills) | 2004 | null |
 | 2026-05-24 | [thananon/9arm-skills](https://github.com/thananon/9arm-skills) | 1872 | null |
 
 > 自动化报告仓库
