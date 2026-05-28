@@ -1,4 +1,5 @@
 # awesome-agent-skills
+| 2026-05-28 | [MoonshotAI/kimi-code](https://github.com/MoonshotAI/kimi-code) | 901 | The Starting Point for Next-Gen Agents |
 | 2026-05-27 | [MoonshotAI/kimi-code](https://github.com/MoonshotAI/kimi-code) | 750 | The Starting Point for Next-Gen Agents |
 | 2026-05-26 | [thananon/9arm-skills](https://github.com/thananon/9arm-skills) | 2226 | null |
 | 2026-05-25 | [thananon/9arm-skills](https://github.com/thananon/9arm-skills) | 2004 | null |
