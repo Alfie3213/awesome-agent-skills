@@ -1,4 +1,5 @@
 # awesome-agent-skills
+| 2026-06-06 | [pewdiepie-archdaemon/odysseus](https://github.com/pewdiepie-archdaemon/odysseus) | 56054 | Self-hosted AI workspace.  |
 
 > 自动化报告仓库
 
