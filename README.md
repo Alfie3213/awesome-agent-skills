@@ -1,4 +1,5 @@
 # awesome-agent-skills
+| 2026-06-18 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 32455 | Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. |
 | 2026-06-17 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 26130 | Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. |
 | 2026-06-16 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 17287 | Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. |
 | 2026-06-15 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 8726 | Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. |
