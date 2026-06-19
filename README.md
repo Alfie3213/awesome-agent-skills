@@ -1,17 +1,10 @@
 # awesome-agent-skills
-| 2026-06-19 | [vercel/eve](https://github.com/vercel/eve) | 1410 | The Framework for Building Agents |
-| 2026-06-18 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 32455 | Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. |
-| 2026-06-17 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 26130 | Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. |
-| 2026-06-16 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 17287 | Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. |
-| 2026-06-15 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 8726 | Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. |
-| 2026-06-14 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 1622 | Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. |
-| 2026-06-13 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 975 | Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote. |
 
 > 自动化报告仓库
 
 ## 📅 最新更新
 
-- [daily/2026-06-12.md](daily/2026-06-12.md)
+- [daily/2026-06-19.md](daily/2026-06-19.md)
 
 ---
 
