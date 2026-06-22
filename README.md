@@ -1,4 +1,5 @@
 # awesome-agent-skills
+| 2026-06-22 | [vercel/eve](https://github.com/vercel/eve) | 2109 | The Framework for Building Agents |
 | 2026-06-21 | [vercel/eve](https://github.com/vercel/eve) | 1882 | The Framework for Building Agents |
 | 2026-06-20 | [vercel/eve](https://github.com/vercel/eve) | 1662 | The Framework for Building Agents |
 
